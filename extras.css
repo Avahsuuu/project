@@ -1,0 +1,317 @@
+header {
+            z-index: 20;
+        }
+
+        .bg-img {
+            height: auto;
+            width: 100%;
+        }
+        .banner {
+            position: relative;
+        }
+        .banner img{
+            width: 100%;
+            z-index: -2;
+        }
+
+        
+        .slogan-line1 { 
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        .slogan-line2 { 
+            font-weight: bold;
+            position: absolute;
+            top: 65%;
+            left: 65%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        main {
+            position: relative;
+            width: 70%;
+            /* max-width: 1200px; */
+            height: auto;
+            margin: auto;
+            /* padding: 40px; */
+            /* background-color: #fcfcfc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+            border-radius: 5px;
+            position: relative;
+            z-index: 5;
+        }
+
+        
+        /* .plans-content-wrapper {
+            display: flex;
+            gap: 10%;
+        } */
+
+        .plans-sub-nav {
+            flex-shrink: 0;
+            width: 20%; 
+            padding-top: 20px;
+            font-family: sans-serif; 
+        }
+
+        .plans-sub-nav h2 {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Noto Serif TC;
+            color: #333;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc; /* 分隔線 */
+        }
+
+        .plans-sub-nav ul {
+            font-size: 14px;
+            list-style: none;
+            line-height: 30px;
+            font-family: Noto Serif TC;
+            margin-left: 30px;
+        }
+
+        .plans-sub-nav li a.active {
+            background-color: #f0f0f0;
+            color: #5f1313; /* 模擬圖片中的紅色高亮 */
+            border-left: 3px solid #230707;
+            font-weight: bold;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        
+
+        /* accessory */
+
+
+        .accessory-intro {
+            /* border: 1px solid black; */
+            margin-left: 30%;
+            width: 65%;
+            margin-bottom:50px;
+        }
+
+        .accessory-list {
+            display: flex;
+            gap: 20px; 
+            margin-top: 40px;
+        }
+
+        .accessory-list2 {
+            display: flex;
+            gap: 20px;
+            margin-top: 70px; 
+        }
+
+        .accessory-intro h3 {
+            font-family: Noto Serif TC;
+            margin-bottom: 25px; 
+            margin-left: 15%;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .accessory-intro h3::before {
+            content: "";
+            flex-grow: 1; 
+            height: 0.5px; 
+            background-color: #a0a0a0; 
+            margin-right: 20px; 
+            max-width: 200px; 
+
+        
+        }
+
+        
+        .accessory-intro h3::after {
+            content: "";
+            flex-grow: 1;            
+            height: 0.5px;
+            background-color: #a0a0a0;
+            margin-left: 20px; 
+            max-width: 200px; 
+        }
+
+        .accessory-img {
+            display: flex;
+            justify-content: center;
+        }
+        .accessory-img img{
+            width: 200px;
+            height: auto;
+            /* margin: auto; */
+        }
+
+        .accessory-textcontent .title {
+            text-align: left;
+            font-family: Noto Serif TC;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .accessory-textcontent .txt {
+            
+            width: 100%
+            font-family:Noto Sans TC;
+            margin-top: 15px;
+            line-height: 25px;
+            font-size: 14px;
+            color: #545052;
+            
+        }
+
+        .accessory-textcontent .price {
+            text-align: right;
+            font-family: Noto Serif TC;
+            color: #8695B1;
+        }
+
+        /* photo */
+
+        .photo-intro {
+            /* border: 1px solid black; */
+            margin-left: 30%;
+            width: 65%;
+            margin-bottom:50px;
+        }
+
+        .photo-list {
+            display: flex;
+            gap: 20px; 
+            margin-top: 40px;
+        }
+
+
+        .photo-intro h3 {
+            font-family: Noto Serif TC;
+            margin-bottom: 25px; 
+            margin-left: 10%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .photo-intro h3::before {
+            content: "";
+            flex-grow: 1; 
+            height: 0.5px; 
+            background-color: #a0a0a0; 
+            margin-right: 20px; 
+            max-width: 200px; 
+
+        
+        }
+
+        
+        .photo-intro h3::after {
+            content: "";
+            flex-grow: 1;            
+            height: 0.5px;
+            background-color: #a0a0a0;
+            margin-left: 20px; 
+            max-width: 200px; 
+        }
+
+        .accessory-img {
+            display: flex;
+            justify-content: center;
+        }
+        .accessory-img img{
+            width: 200px;
+            height: auto;
+            /* margin: auto; */
+        }
+
+        .accessory-textcontent .title {
+            text-align: left;
+            font-family: Noto Serif TC;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .accessory-textcontent .txt {
+            
+            width: 100%
+            font-family:Noto Sans TC;
+            margin-top: 15px;
+            line-height: 25px;
+            font-size: 14px;
+            color: #545052;
+            
+        }
+
+        .accessory-textcontent .price {
+            text-align: right;
+            font-family: Noto Serif TC;
+            color: #8695B1;
+        }
+
+        .plan-icon {
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid #333; */
+            width: 200px;
+            height: auto;
+            /* margin-left: -5px; */
+        }
+
+        .plan-icon img {
+            width: 50px;
+        }
+
+        .photo-card {
+            /* display: flex; */
+            width: 65%;
+            gap: 20px; 
+            
+        }
+        /* ------------- */
+
+        .plan-textcontent .title {
+            text-align: center;
+            font-family: Noto Serif TC;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        
+        .plan-textcontent .txt {
+            
+            width: 100%
+            font-family:Noto Sans TC;
+            margin-top: 15px;
+            line-height: 25px;
+            font-size: 13px;
+            color: #545052;
+            
+        }
+
+        .plan-textcontent .price {
+            text-align: right;
+            font-family: Noto Serif TC;
+            color: #8695B1;
+            margin-top: 15px;
+            margin-right: 5px;
+        }

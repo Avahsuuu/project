@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popular_kimono</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="kimono.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+
+        body {
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            /* background-image: url("repeat-bg.png"); */
+            /* background-size: cover; */
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: 150px 150px;
+            background-repeat: repeat;
+            color: #333;
+            background-color: #FFF9F9;
+            position: relative; 
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; /* 至少佔滿一個視口高度 */
+        }
+
+        body::before {
+            content: ""; 
+            position: fixed; /* 讓遮罩固定在整個視窗 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* 設定半透明白色遮罩 */
+            /* RGBA(255, 255, 255, 0.8) = 白色，80% 不透明度 (背景圖會露出 20%) */
+            /* background-color: rgba(255, 255, 255, 0.3);  */
+            
+            z-index: -1; /* 將遮罩放在 body 內容的下方 */
+            }
+
+            body {
+            /* 步驟 1: 設定背景圖片的路徑 */
+            background-image: url("pic.other/shadow\ \(2\).png"); 
+
+            /* 步驟 2: 確保圖片覆蓋整個視口 */
+            background-size: cover; 
+
+            /* 步驟 3: 固定圖片位置，避免滾動時背景圖跟著移動 */
+            background-attachment: scroll; 
+
+            /* 步驟 4: 圖片不重複 */
+            background-repeat: no-repeat; 
+
+            /* 步驟 5: 圖片起始位置 (可選，通常居中) */
+            background-position: center center;
+
+            /* 可選: 設置一個背景顏色，以防圖片加載失敗或圖片透明處 */
+            background-color: #f0f0f0; 
+        }
+
+        /* body {
+            background: url("pic.other/shadow\ \(2\).png") center center / cover no-repeat fixed;
+            background-color: #f0f0f0; 
+        }*/
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <header>
+        <div class="header-container">
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="pic.index/logo.png" alt="">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="about.html">關於我們</a></li>
+                    <li class="header-item"><a href="booking.html">預約表單</a></li>
+                    <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
+                    <li class="header-item"><a href="news.html">最新消息</a></li>
+                    <li class="header-item"><a href="faq.html">常見問題</a></li>
+                    <li class="header-item"><a href="location.html">門市資訊</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+        <div class="banner">
+            
+            <div class="banner-img">
+                <img src="pic.kimono/banner-img2.jpg" alt="京都和服租賃">
+            </div>
+        
+
+        <div class="slogan">
+            <div class="slogan-line1">定格京都之美</div>
+            <div class="slogan-line2">專屬你的日式浪漫</div>
+        </div>
+    </div>
+<main>
+        <div class="plans-content-wrapper">
+
+            <nav class="plans-sub-nav">
+                <h2>方案與服務詳情</h2>
+                <ul>
+                    <li><a href="basic_plan.html">方案介紹</a></li>
+                    <li><a href="popular_kimono.1.html" class="active">熱門和服款式</a></li>
+                    <li><a href="extras.html">攝影、配件加購</a></li>
+                </ul>
+            </nav>
+
+            <div class="kimono-list">
+
+                <div class="kimono-card">
+                    <div class="kimono-img-group">
+                        <div class="kimono-img main-kimono-img">
+                            <img src="pic.kimono/kimono-img1.png" alt="夏日花火浪漫主圖">
+                        </div>
+                        <div class="kimono-sub-imgs">
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img1.02.png" alt="夏日花火浪漫小圖1">
+                            </div>
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img1.02.png" alt="夏日花火浪漫小圖2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kimono-text-wrapper">
+                        <div class="kimono-title">🌻 夏日花火浪漫</div>
+
+                        <div class="kimono-color-options">
+                            <div class="color-dot" style="background-color: #FFC0CB;"></div>
+                            <div class="color-dot" style="background-color: #7FFFD4;"></div>
+                            <div class="color-dot" style="background-color: #FFA07A;"></div>
+                        </div>
+
+                        <div class="kimono-txt">
+                            這是一款專為夏日祭典打造的清涼元氣浴衣。採用輕薄透氣材質，視覺上運用日系向日葵與水波紋設計，帶來清爽感。穿上它，您將感受到視覺與體感的雙重降溫效果。鮮明的色彩讓您在人群中脫穎而出，享受最無拘束的夏日京都。
+                        </div>
+                        <div class="kimono-actions">
+                            <button class="bookingnow-btn">
+                                <i class="fa-solid fa-calendar-check"></i> 立即預約
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="fa-solid fa-heart"></i> 加入收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kimono-card">
+                    <div class="kimono-img-group">
+                        <div class="kimono-img main-kimono-img">
+                            <img src="pic.kimono/kimono-img2.png" alt="京都雅緻．職人錦鯉主圖">
+                        </div>
+                        <div class="kimono-sub-imgs">
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img2.01.png" alt="京都雅緻．職人錦鯉小圖1">
+                            </div>
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img2.02.png" alt="京都雅緻．職人錦鯉小圖2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kimono-text-wrapper">
+                        <div class="kimono-title">🎏 京都雅緻．職人錦鯉</div>
+
+                        <div class="kimono-color-options">
+                            <div class="color-dot" style="background-color: #F8F8FF;"></div>
+                            <div class="color-dot" style="background-color: #E0FFFF;"></div>
+                        </div>
+
+                        <div class="kimono-txt">這是一款靜謐雅緻的經典款式，完美融入京都古都的幽靜風景。
+                            採用柔和的米白底色，搭配細膩的金色錦鯉圖騰，象徵吉祥與富足，體現出質感內斂的日式傳統品味。</div>
+                        <div class="kimono-actions">
+                            <button class="bookingnow-btn">
+                                <i class="fa-solid fa-calendar-check"></i> 立即預約
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="fa-solid fa-heart"></i> 加入收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kimono-card">
+                    <div class="kimono-img-group">
+                        <div class="kimono-img main-kimono-img">
+                            <img src="pic.kimono/kimono-img3.png" alt="緋紅之舞．復古和風主圖">
+                        </div>
+                        <div class="kimono-sub-imgs">
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img3.01.png" alt="緋紅之舞．復古和風小圖1">
+                            </div>
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img3.02.png" alt="緋紅之舞．復古和風小圖2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kimono-text-wrapper">
+                        <div class="kimono-title">🏮 緋紅之舞．復古和風</div>
+
+                        <div class="kimono-color-options">
+                            <div class="color-dot" style="background-color: #DC143C;"></div>
+                            <div class="color-dot" style="background-color: #F08080;"></div>
+                        </div>
+
+                        <div class="kimono-txt">採用經典紅白配色，線條簡潔卻充滿戲劇張力。大朵的緋紅花紋與精緻的工藝細節，讓穿著者具備強烈的視覺焦點。它是情侶寫真或個人藝術照的首選。
+                        </div>
+                        <div class="kimono-actions">
+                            <button class="bookingnow-btn">
+                                <i class="fa-solid fa-calendar-check"></i> 立即預約
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="fa-solid fa-heart"></i> 加入收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kimono-card">
+                    <div class="kimono-img-group">
+                        <div class="kimono-img main-kimono-img">
+                            <img src="pic.kimono/kimono-img4.png" alt="櫻語浪漫．恬靜之美主圖">
+                        </div>
+                        <div class="kimono-sub-imgs">
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img4.01.png" alt="櫻語浪漫．恬靜之美小圖1">
+                            </div>
+                            <div class="kimono-simg">
+                                <img src="pic.kimono/kimono-img4.02.png" alt="櫻語浪漫．恬靜之美小圖2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kimono-text-wrapper">
+                        <div class="kimono-title">🌸 櫻語浪漫．恬靜之美</div>
+
+                        <div class="kimono-color-options">
+                            <div class="color-dot" style="background-color: #a3c4f3;"></div>
+                            <div class="color-dot" style="background-color: #f7b2c0;"></div>
+                            <div class="color-dot" style="background-color: #fce78e;"></div>
+                        </div>
+
+                        <div class="kimono-txt">
+                            這是一款充滿櫻花詩意的恬靜浴衣，捕捉日式浪漫的優雅瞬間。以經典的和風櫻花為主要圖案，搭配素雅底色，營造出溫柔而內斂的氛圍。輕柔的布料與簡約的設計，讓您在漫步京都小巷時，能感受微風拂過的清爽與自在。
+                        </div>
+                        <div class="kimono-actions">
+                            <button class="bookingnow-btn">
+                                <i class="fa-solid fa-calendar-check"></i> 立即預約
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="fa-solid fa-heart"></i> 加入收藏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination-link">
+                    <a href="popular_kimono.2.html">
+                        next  page 
+                        <img src="pic.other/next-icon.png" alt="">
+                    </a>
+                </div>
+
+                
+
+
+
+            </div>
+
+
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <img src="pic.index/logo-txt-img.png" alt="Harumi Logo" class="footer-logo">
+    
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h4>聯絡資訊</h4>
+                    <address>
+                        地址：日本京都市東山區祇園町南側 570-8<br>
+                        電話（台灣聯絡):0912-345-678<br>
+                        預約信箱:blooming.florist@gmail.com
+                    </address>
+                    <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+                </div>
+            </div>
+    
+            <div class="icon">
+                <img src="pic.other/line-icon.png" alt="Line">
+                <img src="pic.other/facebook-icon.png" alt="Facebook">
+                <img src="pic.other/instagram-icon.png" alt="Instagram">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

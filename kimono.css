@@ -1,0 +1,229 @@
+        header {
+            z-index: 20;
+        }
+
+        .bg-img {
+            height: auto;
+            width: 100%;
+        }
+        .banner {
+            position: relative;
+        }
+        .banner img{
+            width: 100%;
+            z-index: -2;
+        }
+
+        main {
+            position: relative;
+        }
+        .slogan-line1 { 
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        .slogan-line2 { 
+            font-weight: bold;
+            position: absolute;
+            top: 65%;
+            left: 65%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        main {
+            width: 70%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px;
+            /* background-color: #fcfcfc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+            border-radius: 5px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .plans-content-wrapper {
+            display: flex;
+            gap: 10%;
+        }
+
+        .plans-sub-nav {
+            flex-shrink: 0;
+            width: 20%; 
+            padding-top: 20px;
+            font-family: sans-serif; 
+        }
+
+        .plans-sub-nav h2 {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Noto Serif TC;
+            color: #333;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc; /* 分隔線 */
+        }
+
+        .plans-sub-nav ul {
+            font-size: 14px;
+            list-style: none;
+            line-height: 30px;
+            font-family: Noto Serif TC;
+            margin-left: 30px;
+        }
+
+        .plans-sub-nav li a.active {
+            background-color: #f0f0f0;
+            color: #5f1313; /* 模擬圖片中的紅色高亮 */
+            border-left: 3px solid #230707;
+            font-weight: bold;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* kimono */
+
+        .kimono-card:nth-child(even) {
+            flex-direction: row-reverse;
+        } 
+
+        .kimono-card {
+            display: flex; /* 啟用 Flexbox 佈局，讓子元素水平排列 */
+            align-items: flex-start; /* 子元素靠頂部對齊 */
+            /* margin-bottom: 50px; */
+            padding: 20px 0;
+            
+            gap: 30px; /* 圖片和文字之間的間距 */
+            flex-shrink: 0;
+        }
+
+        .kimono-img-group {
+            width: 40%;
+            display: flex; 
+            /* align-items: end; */
+            flex-shrink: 0;
+            /* margin-bottom: 50px; */
+            /* padding: 20px 0; */
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0; 
+            padding: 0;
+        }
+        
+        .kimono-img img{
+            width: 200px;
+        }
+
+        /* .kimono-img-group .kimono-simg img {
+            display: flex;
+            margin-top: 5px;
+            width: 30px;
+            margin: 3px;
+        } */
+
+        .kimono-simg img{
+            display: flex;
+            margin-top: 5px;
+            width: 30px;
+            margin: 3px;
+        }
+
+        .kimono-title {
+            font-family: Noto Serif TC;
+            font-size: 18px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-weight: bold;
+        }
+        
+        .kimono-txt {
+            color: #5D5959;
+            font-size: 12px;
+            line-height: 30px;
+        }
+
+
+        /* butt */
+
+        .kimono-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        /* Font Awesome 圖示 */
+        .butt .fa-solid {
+            /* color: var(--accent-color); */
+            font-size: 30px;
+        }
+
+        .kimono-actions button {
+            padding: 8px 18px;
+            border: 1px solid var(--accent-color);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .bookingnow-btn {
+            background-color: #F7F7CE;
+            color: #5D5959;
+            /* border-color: var(--accent-color); */
+        }
+
+        .bookingnow-btn:hover {
+            background-color: #d8cc43;
+            color: #ffffff;
+        }
+
+        .favorite-btn {
+            background-color: #E8CDDB;
+            color: #5D5959;
+        }
+
+        .favorite-btn:hover {
+            background-color: #d84370;
+            color: #fffefe;
+        }
+
+        .pagination-link {
+            text-align: right;
+            padding-top: 20px;
+        }
+
+
+        .kimono-actions button .button-icon {
+            width: 16px; 
+            height: 16px;
+            margin-right: 5px; 
+            vertical-align: middle; 
+        }
+
+        .pagination-link {
+            color: #746e6e;
+            letter-spacing: 2px;
+        }
+
+        .pagination-link img {
+            height: 10px;
+        }

@@ -1,0 +1,94 @@
+footer CSS
+footer {
+  background: #E9E1E1;
+  /* padding: 40px 20px; */
+  font-family: "Noto Sans TC", sans-serif;
+  
+}
+
+.footer-wrapper {
+  /* padding: 30px; */
+  height: 250px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #E9E1E1;
+  display: flex;              /* 水平排列 */
+  justify-content: center;     /*三個區塊在wrapper中置中 */
+  align-items: flex-end;   
+      /* 垂直置中對齊 */
+  gap: 90px;     
+  padding-bottom: 40px;
+        /* 三區塊間距 */
+}
+
+.footer-wrapper img {
+  width: 200px;
+}
+
+/* .footer-logo {
+  /* margin-top: 140px; */
+  width: 120px;
+  flex-shrink: 0;     
+  gap: 20px;        
+} */
+
+.footer-container  {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* .footer-info h4 {
+  margin-bottom: 15px;
+  font-weight: 400px;
+  font-size: 1.2rem;
+} */
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.icon {
+  display: flex;
+  gap: 15px; 
+}
+
+.icon img {
+  /* margin-top: 140px; */
+  width: 35px;
+  height: auto
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: rgb(72, 65, 78);
+}
+
+.icon img:hover {
+  transform: scale(1.1);
+}
+
+==================================
+/* footer html
+<footer>
+        <div class="footer-wrapper">
+            <img src="pic.index/harumi.png" alt="Harumi Logo" class="footer-logo">
+
+            <div class="footer-container">
+            <div class="footer-info">
+                <h4>聯絡資訊</h4>
+                <address>
+                地址：日本京都市東山區祇園町南側 570-8<br>
+                電話（台灣）：0912-345-678<br>
+                預約信箱：blooming.florist@gmail.com
+                </address>
+                <div>服務時間：週一至週六 10:00–18:00（京都當地）</div>
+            </div>
+            </div>
+
+            <div class="icon">
+                <img src="pic.index/line.png" alt="Line">
+                <img src="pic.index/facebook.png" alt="Facebook">
+                <img src="pic.index/ig.png" alt="Instagram">
+            </div>
+        </div>
+    </footer> */

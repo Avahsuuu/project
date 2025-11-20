@@ -1,0 +1,216 @@
+header {
+            z-index: 20;
+        }
+
+        .bg-img {
+            height: auto;
+            width: 100%;
+        }
+        .banner {
+            position: relative;
+        }
+        .banner img{
+            width: 100%;
+            z-index: -2;
+        }
+
+        main {
+            position: relative;
+        }
+        .slogan-line1 { 
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        .slogan-line2 { 
+            font-weight: bold;
+            position: absolute;
+            top: 65%;
+            left: 65%;
+            font-size: 22px;
+            font-family: Noto Serif TC;
+            color: #514E4E;
+        }
+
+        main {
+            width: 70%;
+            /* max-width: 1200px; */
+            height: auto;
+            margin: auto;
+            /* padding: 40px; */
+            /* background-color: #fcfcfc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+            border-radius: 5px;
+            position: relative;
+            z-index: 5;
+        }
+
+        
+        /* .plans-content-wrapper {
+            display: flex;
+            gap: 10%;
+        } */
+
+        .plans-sub-nav {
+            flex-shrink: 0;
+            width: 20%; 
+            padding-top: 20px;
+            font-family: sans-serif; 
+        }
+
+        .plans-sub-nav h2 {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Noto Serif TC;
+            color: #333;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc; /* 分隔線 */
+
+
+        }
+
+        .plans-sub-nav ul {
+            font-size: 14px;
+            list-style: none;
+            line-height: 30px;
+            font-family: Noto Serif TC;
+            margin-left: 30px;
+        }
+
+        .plans-sub-nav li a.active {
+            background-color: #f0f0f0;
+            color: #5f1313; /* 模擬圖片中的紅色高亮 */
+            border-left: 3px solid #230707;
+            font-weight: bold;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .plans-sub-nav li a:hover:not(.active) {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        
+
+        /* plan */
+
+        .basic-intro {
+            /* border: 1px solid black; */
+            margin-left: 30%;
+            width: 65%;
+            margin-bottom:50px;
+        }
+
+        .plan-list {
+            display: flex;
+            gap: 20px; 
+            
+            
+        }
+
+        .plan-card {
+            /* border: 1px solid rgb(240, 9, 9); */
+            
+        }
+        .basic-intro h3 {
+            font-family: Noto Serif TC;
+            margin-bottom: 25px; 
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5%;
+
+        }
+
+
+
+        
+        .basic-intro h3::before {
+            content: "";
+            flex-grow: 1; 
+            height: 0.5px; 
+            background-color: #a0a0a0; 
+            margin-right: 20px; 
+            max-width: 200px; 
+
+        
+        }
+
+        
+        .basic-intro h3::after {
+            content: "";
+            flex-grow: 1;            
+            height: 0.5px;
+            background-color: #a0a0a0;
+            margin-left: 20px; 
+            max-width: 200px; 
+        }
+
+
+        .plan-cimg {
+            display: flex;
+            justify-content: center;
+            
+        }
+        .plan-cimg img{
+            width: 190px;
+            height: auto;
+            /* margin: auto; */
+        }
+
+
+        .plan-img {
+            gap: 5px;
+        }
+        .plan-img img{
+            width: 190px;
+            height: auto;
+        }
+
+        
+
+        .plan-textcontent .title {
+            text-align: center;
+            font-family: Noto Serif TC;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 4%;
+
+        }
+
+
+        .plan-textcontent .txt {
+            
+            width: 100%
+            font-family:Noto Sans TC;
+            margin-top: 15px;
+            line-height: 25px;
+            font-size: 14px;
+            color: #545052;
+            /* margin-left: 10px; */
+        }
+
+        .plan-textcontent .price {
+            text-align: right;
+            font-family: Noto Serif TC;
+            color: #8695B1;
+        }
+
+        .txt-bg {
+            background-color: #E9EDE7;
+            border-radius: 15px;
+            opacity: 0.8;
+            padding: 5px;
+            /* box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1); */
+        }

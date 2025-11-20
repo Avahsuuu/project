@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+
+    main {
+        position: relative;
+    }
+    .nwes-info-container {
+    height: 100%;
+    width: 70%;
+    max-width: 1200px;
+    /* margin: -100px auto 50px auto; */
+    /* 負邊距向上移動，覆蓋 banner */
+    margin: auto;
+    
+    padding: 40px;
+    /* background-color: #fcfcfc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    position: relative;
+    z-index: 5;
+    } 
+
+    .banner-img img {
+        width: 100%;
+    }
+
+    .news-info {
+        display: flex;             
+        flex-direction: column;    
+        align-items: flex-end;
+    }
+    .news-item {
+        width: 70%;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .news-img img {
+        width: 180px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .time {
+        font-family: "Noto Serif TC", serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-left: 3px;
+    }
+
+    .news-textcontent .news-title {
+        font-family: "Noto Serif TC", serif;
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+
+    .news-textcontent .news-txt {
+        font-size: 12px;
+        color: #717070;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+
+    .txt-img img {
+        width: 13%; 
+        height: auto;
+    }
+    .title-content h3 {
+        font-family: noto serif tc;
+        width: 80px;
+        background-color: #f0f0f0;
+        color: #102859; /* 模擬圖片中的紅色高亮 */
+        border-left: 3px solid #230707;
+        font-weight: bold;
+        padding-left: 5px;
+        margin-left: 23px;
+        margin-top: 17px;
+        font-size: 14px;
+
+    }
+
+    .pagination-link {
+            color: #746e6e;
+            letter-spacing: 2px;
+            width: 200px;
+        }
+
+    .flower-img img {
+        height: auto;
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        left: -25%;
+    }
+
+    .pagination-link img{
+        height: 10px;
+
+    }
+
+
+    </style>
+    
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="pic.index/logo.png" alt="">
+                </a>
+            </div>
+    
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="about.html">關於我們</a></li>
+                    <li class="header-item"><a href="booking.html">預約表單</a></li>
+                    <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
+                    <li class="header-item"><a href="news.html">最新消息</a></li>
+                    <li class="header-item"><a href="faq.html">常見問題</a></li>
+                    <li class="header-item"><a href="location.html">門市資訊</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner-img">
+            <img src="pic.other/banner-img-3.png" alt="">
+        </div>
+    </div>
+
+
+
+    <main>
+
+
+    <!-- location-info -->
+    <div class="nwes-info-container">
+
+        <div class="title-content">
+            <div class="txt-img">
+                <img src="pic.other/News-img.png" alt="">
+            </div>
+            <h3>最新消息</h3>
+        </div>
+
+        <div class="news-info">
+            <div class="news-item">
+            <div class="news-img">
+                <img src="pic.other/news-img1.png" alt="">
+
+                <div class="time">
+                    <p>2025/10/22</p>
+                </div>
+            </div>
+
+            
+            <div class="news-textcontent">
+                
+                <div class="news-title">
+                    <h4>【期間限定】「夜間浪漫」浴衣特展暨祇園限定體驗<br>- 祇園月夜🌙・浪漫限定</h4>
+                </div>
+                <div class="news-txt">
+                    <p>hanumi首屆「夜間浪漫」浴衣特展啟動！我們將打造專屬於夏日夜晚的氛憬，邀您在涼風中，穿上特選的質感浴衣，點亮京都的夜色。在hanumi，每一次體驗都是一場關於美的約會。亮點搶先看，夜間特選浴衣：
+                    搶先預覽並租借僅供夜間時段的深色系、優雅質感浴衣，襯托夜晚氣質。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <div class="news-item">
+            <div class="news-img">
+                <img src="pic.other/news-img2.png" alt="">
+                <div class="time">
+                    <p>2025/09/07</p>
+                </div>
+            </div>
+            <div class="news-textcontent">
+                
+                <div class="news-title">
+                    <h4>【服務升級】「振袖與您」年度造型諮詢會👘 <br>- 為最隆重的一天準備</h4>
+                </div>
+                <div class="news-txt">
+                    <p>「振袖與您」年度造型諮詢會，全面啟動！無論是成人式、畢業典禮或重要婚宴，振袖都承載著您對未來的美好期許。hanumi推出一對一深度諮詢，確保您在最重要時刻光彩奪目。服務亮點，振袖品項搶先看：
+                    搶先預覽並預約下一季最新引進的「豪華振袖」與「頂級訪問著」款式。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-img">
+                <img src="pic.other/news-img3.png" alt="">
+                <div class="time">
+                    <p>2025/07/16</p>
+                </div>
+            </div>
+            <div class="news-textcontent">
+                
+                <div class="news-title">
+                    <h4>【文化沙龍】「著物之美」和服穿著與保養講座 <br>- 文化沙龍🌿系列</h4>
+                </div>
+                <div class="news-txt">
+                    <p>「著物之美」和服穿著與保養講座。邀請和服文化專家，深入淺出地講解和服的歷史、穿著細節與正確的保養方式。讓您不僅是穿上「著物」，更能理解和感受其背後的文化底蘊。沙龍亮點 - 深度文化探索：
+                    探討「振袖」、「訪問著」與「小紋」的真正區別及不同場合的穿著禮儀。
+                    </p>
+                </div>
+            </div>
+
+        
+
+
+        
+
+    </div>
+                <div class="pagination-link">
+                    <p>next page
+                        <img src="pic.other/next-icon.png" alt=""> 
+                    </p>
+                </div>
+                
+                <div class="flower-img">
+                    <img src="pic.other/news-flower-img.png" alt="">
+                </div>
+    </main>
+                
+<!-- footer -->
+<footer>
+    <div class="footer-wrapper">
+        <img src="pic.index/logo-txt-img.png" alt="Harumi Logo" class="footer-logo">
+
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>聯絡資訊</h4>
+                <address>
+                    地址：日本京都市東山區祇園町南側 570-8<br>
+                    電話（台灣聯絡):0912-345-678<br>
+                    預約信箱:blooming.florist@gmail.com
+                </address>
+                <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+            </div>
+        </div>
+
+        <div class="icon">
+            <img src="pic.other/line-icon.png" alt="Line">
+            <img src="pic.other/facebook-icon.png" alt="Facebook">
+            <img src="pic.other/instagram-icon.png" alt="Instagram">
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

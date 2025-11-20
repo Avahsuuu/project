@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="booking.css">
+    
+    
+    <body>
+        <style>
+            .banner img {
+                width: 100%;
+                
+            }
+
+            .body-container {
+            width: 70%;
+            max-width: 1200px;
+            /* margin: -100px auto 50px auto; */
+            /* 負邊距向上移動，覆蓋 banner */
+            margin: auto;
+            padding: 40px;
+            background-color: #fcfcfc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: relative;
+            z-index: 5;
+        }
+            
+    
+        </style>
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="pic.index/logo.png" alt="">
+                    </a>
+                </div>
+    
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li class="header-item"><a href="about.html">關於我們</a></li>
+                        <li class="header-item"><a href="Reservation.html">預約表單</a></li>
+                        <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
+                        <li class="header-item"><a href="news.html">最新消息</a></li>
+                        <li class="header-item"><a href="faq.html">常見問題</a></li>
+                        <li class="header-item"><a href="location.html">門市資訊</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Banner -->
+        <div class="banner">
+            <img src="pic.other/banner-img-3.png" alt="">
+        </div>
+        <!-- Reservation -->
+        <main class="reservation-bg">
+            <div class="body-container">
+                
+                <div class="booknow">
+                    
+                        <div class="booknow-img">
+                            <img src="pic.other/Book-img.png" alt="">
+                        </div>
+                        <h3>立即預約</h3>
+                    
+                </div>
+                <div class="reservation-wrapper">
+                    
+                    <div class="step-img">
+                        <img src="pic.other/form-step-img.png" alt="">
+                    </div>
+                    <div class="booking-steps">
+                        <div class="step">
+                            <img src="svg/step1.svg" alt="">
+                            <p>時間選擇</p>
+                        </div>
+                        <div class="step">
+                            <img src="svg/step2.svg" alt="">
+                            <p>訊息輸入</p>
+                        </div>
+                        <div class="step">
+                            <img src="svg/step3.svg" alt="">
+                            <p>內容確認</p>
+                        </div>
+                    </div>
+    
+                    <!-- ====== 預約資訊 ====== -->
+                    <div class="section-line">
+                        <div class="section-title">預約資訊</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>預定日期*</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>人數*</label>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- ====== 聯絡資訊 ====== -->
+                    <div class="section-line">
+                        <div class="section-title">聯絡資訊</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>姓</label>
+                            <input type="text">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>名</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>E-mail*</label>
+                            <input type="email">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>電話號碼*</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <!-- ====== 方案選擇 ====== -->
+                    <div class="section-line">
+                        <div class="section-title">方案選擇</div>
+                    </div>
+                    <div class="form-group">
+                        <label>基本方案選項*</label>
+                        <select>
+                            <option>請選擇方案</option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>加購需求</label>
+                        <select>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <!-- ====== 注意事項 ====== -->
+                    <div class="notice-box">
+                        <p><strong>⚠︎ 報名前請留意以下事項：</strong></p>
+                        <ul>
+                            <li>請提前 10 分鐘到場。</li>
+                            <li>本店採預約制，若需取消請於 24 小時前通知。</li>
+                            <li>若遲到超過 15 分鐘，可能影響課程時間。</li>
+                            <li>孕婦、特殊疾病者請主動告知。</li>
+                        </ul>
+                    </div>
+                    <button class="submit-btn">提 交</button>
+                </div>
+        </main>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-wrapper">
+                <img src="pic.index/logo-txt-img.png" alt="Harumi Logo" class="footer-logo">
+    
+                <div class="footer-container">
+                    <div class="footer-info">
+                        <h4>聯絡資訊</h4>
+                        <address>
+                            地址：日本京都市東山區祇園町南側 570-8<br>
+                            電話（台灣）：0912-345-678<br>
+                            預約信箱：blooming.florist@gmail.com
+                        </address>
+                        <div>服務時間：週一至週六 10:00–18:00（京都當地）</div>
+                    </div>
+                </div>
+    
+                <div class="icon">
+                    <img src="pic.other/line-icon.png" alt="Line">
+                    <img src="pic.other/facebook-icon.png" alt="Facebook">
+                    <img src="pic.other/instagram-icon.png" alt="Instagram">
+                </div>
+            </div>
+        </footer>
+    </body>
+    
+    </html>
