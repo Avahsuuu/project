@@ -1,0 +1,415 @@
+main {
+    padding-top: 100px; 
+    width: 90%;
+    margin: 0 auto;
+    /* 移除 min-height: 1200px; */ 
+    background-color: transparent;
+    height: 1600px;
+}
+
+main > section,
+main > div {
+    /* max-width: 1100px;  */
+    width: 85%; 
+    margin: auto; /* 設置上下間距 50px，水平置中 */
+}
+
+/* about */
+.about-info {
+    
+}
+.about-info h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    /* margin-left: 500px; */
+    font-family: "Noto Serif TC", serif; 
+}
+.about-info-txt {
+    /* width: 50%; */
+    max-width: 700px;
+    margin: 20px auto 50px auto; 
+    color: #5D5959;
+    line-height: 1.8;
+    font-size: 16px;
+    /* margin-left: 500px; */
+}
+
+/* block1 */
+.feature-block-1 {
+    
+}
+.block-1-img img{
+    width: 600px;
+}
+
+.block-1-txt {
+    width: 40%;
+    margin-left: 13%;
+    color: #5D5959;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.feature-block-1 h3 {
+    width: 40%;
+    margin-left: 23%;
+    font-family: "Noto Serif TC", serif; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* block2 */
+.feature-block-2 {
+    margin-left: 60%;
+    margin-top: -7%;
+}
+.block-2-img img{
+    width: 500px;
+}
+
+.block-2-txt {
+    width:100%;
+    color: #5D5959;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 27%;
+}
+
+.feature-block-2 h3 {
+    margin-left: 27%;
+    font-family: "Noto Serif TC", serif; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* block3 (大螢幕/預設 - 保持重疊效果) */
+main {
+    position: relative; /* 確保絕對定位的圖片以 main 為基準 */
+}
+
+.block-3-1-img img {
+    /* position: absolute; */
+    margin-top: 40%;
+    margin-left: 5%;
+    width: 250px;
+}
+.block-3-2-img img {
+    /* position: absolute; */
+    margin-top: 30%;
+    margin-left: 2%;
+    width: 250px;
+    left: 35%;
+}
+.block-3-3-img img {
+    /* position: absolute; */
+    margin-top: 30%;
+    margin-left: 5%;
+    width: 250px;
+    left: 8%;
+}
+
+@media screen and (min-width: 375px) {
+    main {
+    width: 100%;
+    }
+
+    main > section,
+    main > div {
+        width: 100%; 		
+    }
+
+    .about-info h1{
+        text-align: center;
+        margin-top: -40px;
+
+    }
+    .about-info {
+        text-align: center;
+    }
+
+    .about-info-txt {
+        /* margin-left: 20%; */
+        /* background-color: blue; */
+        padding: 35px;
+        text-align: left;
+        
+        line-height: 1.6;
+
+         /* width: 50%; */
+        
+    }
+
+    .block-1-img img{
+        width: 100%;
+        margin-top: -40px;
+        
+    }
+
+    .block-1-txt {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .feature-block-1 h3 {
+        width: 100%;
+        margin-left: 20%;
+    } 
+
+    .feature-block-2 {
+        margin-left: 0%;
+        margin-top: 5%;
+        text-align: center
+    }
+    .block-2-img img{
+        /* margin-top: 20px; */
+        width: 100%;
+    }
+
+    .block-2-txt {
+        width:80%;
+        margin-left: 10%;
+    }
+
+    .feature-block-2 h3 {
+        margin-left: 0%;
+        
+    } 
+    /* .block-3-1-img img {
+    top: 73%;
+    left: 50%;
+    width: 200px;
+    }
+    .block-3-2-img img {
+        top: 88%;
+        width: 200px;
+        left: 58%;
+    }
+    .block-3-3-img img {
+        top: 82%;
+        width: 200px;
+        left: 5%;
+    } */
+}
+
+
+@media screen and (min-width: 768px) {
+
+    main {
+    /* 移除 min-height: 1600px; 保持乾淨 */
+    }
+
+    main > section,
+    main > div {
+        max-width: 1100px; 
+        width: 85%; 		
+        margin: auto; /* 設置上下間距 50px，水平置中 */
+    }
+
+    .about-info h1{
+        text-align: left;
+        margin-left: 500px;
+        margin-top: 0px;
+
+    }
+    .about-info-txt {
+        margin-top: 0px;
+        padding: 0px;
+        width: 50%;
+        margin-left: 500px;
+        line-height: 1.8;
+    }
+
+    .block-1-img img{
+        width: 600px;
+        margin-top: 0px;
+    }
+
+    .block-1-txt {
+        width: 40%;
+        margin-left: 13%;
+    }
+
+    .feature-block-1 h3 {
+        width: 40%;
+        margin-left: 26%;
+    }
+
+    .feature-block-2 {
+    margin-left: 60%;
+    margin-top: -7%;
+    text-align: left;
+
+    }
+    .block-2-img img{
+        width: 500px;
+    }
+
+    .block-2-txt {
+        width:100%;
+    }
+
+    .feature-block-2 h3 {
+        margin-left: 10%;
+    } 
+
+    /* Block 3 絕對定位 (大螢幕重疊) */
+    .block-3-1-img img {
+    position: absolute; /* 確保這個斷點是絕對定位 */
+    top: 25%;
+    left: 5%;
+    width: 250px;
+    }
+    .block-3-2-img img {
+        position: absolute;
+        top: 50%;
+        width: 250px;
+        left: 35%;
+    }
+    .block-3-3-img img {
+        position: absolute;
+        top: 55%;
+        width: 250px;
+        left: 8%;
+    }
+}
+
+
+/* ======================================================= */
+/* 手機版樣式 (RWD for screens up to 576px) */
+/* Block 3 變為垂直堆疊，MAIN 自動撐高！ */
+/* ======================================================= */
+@media screen and (max-width: 576px) {
+    
+    /* 避免圖片溢出，防止水平滾動條 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ---------------------------------- */
+    /* 1. MAIN 容器基礎調整 */
+    /* ---------------------------------- */
+    main {
+        width: 90%;
+        height: 2100px;
+        /* background-color: red */
+    }
+
+    main > section,
+    main > div {
+        /* width: 90%;  */
+        margin: 40px auto; 
+        max-width: none; 
+    }
+
+    /* ---------------------------------- */
+    /* 2. ABOUT 區塊 */
+    /* ---------------------------------- */
+    .about-info h1 {
+        font-size: 26px;
+        font-weight: bold;
+        font-family: "Noto Serif TC", serif; 
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .about-info-txt {
+        color: #5D5959;
+        line-height: 1.6; 
+        font-size: 16px;
+        width: 100%; 
+        max-width: none;
+        margin: 20px auto 50px auto;
+        margin-left: 0; 
+        padding: 0; 
+    }
+
+    /* ---------------------------------- */
+    /* 3. BLOCK 1 (第一個特色區塊) */
+    /* ---------------------------------- */
+    .block-1-img img {
+        width: 90%; 
+        margin: 10px auto; 
+        display: block;
+    }
+    
+    .feature-block-1 h3 {
+        font-family: "Noto Serif TC", serif; 
+        font-size: 18px;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .block-1-txt {
+        color: #5D5959;
+        line-height: 1.6;
+        font-size: 16px;
+        width: 100%;
+        margin-left: 0;
+        margin: auto;
+    }
+
+    /* ---------------------------------- */
+    /* 4. BLOCK 2 (第二個特色區塊) */
+    /* ---------------------------------- */
+    .feature-block-2 {
+        margin-left: 0;
+        margin-top: 5%;
+        text-align: center;
+    }
+    
+    .block-2-img img {
+        width: 90%; 
+        margin: auto;
+        display: block;
+    }
+
+    .feature-block-2 h3 {
+        font-family: "Noto Serif TC", serif; 
+        font-size: 18px;
+        margin-left: 0;
+        text-align: center;
+    } 
+
+    .block-2-txt {
+        color: #5D5959;
+        line-height: 1.6;
+        font-size: 16px;
+        width: 100%;
+        margin: auto;
+        margin-left: 0; 
+    }
+
+    /* ---------------------------------- */
+    /* 5. BLOCK 3 (核心改動：改為垂直堆疊以自動撐高 MAIN) */
+    /* ---------------------------------- */
+    .feature-block-3 {
+        display: flex;        /* 啟用 Flexbox 佈局 */
+        flex-direction: column; /* 圖片垂直堆疊 */
+        align-items: center;  /* 圖片水平置中 */
+        margin: 50px auto;       /* 增加上下間距並置中 */
+        width: 90%;
+    }
+
+    /* 清除所有圖片的絕對定位和定位屬性，使其回到文檔流中 */
+    .block-3-1-img img,
+    .block-3-2-img img,
+    .block-3-3-img img {
+        position: static;     /* 讓圖片回到文檔流，佔用空間！ */
+        top: auto;            /* 清除定位 */
+        left: auto;           /* 清除定位 */
+        transform: none;      /* 清除定位 */
+        width: 70%;           /* 調整圖片大小 */
+        margin: 10px auto;    /* 讓圖片垂直間隔開 */
+        height: auto;
+        display: block;       /* 確保圖片是塊級元素 */
+    }
+}

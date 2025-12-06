@@ -16,6 +16,7 @@
 
         main {
             position: relative;
+            background-color: transparent;
         }
         .slogan-line1 { 
             font-weight: bold;
@@ -41,9 +42,7 @@
             width: 70%;
             max-width: 1200px;
             margin: auto;
-            padding: 40px;
-            /* background-color: #fcfcfc;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+            
             border-radius: 5px;
             position: relative;
             z-index: 5;
@@ -66,9 +65,11 @@
             font-weight: bold;
             font-family: Noto Serif TC;
             color: #333;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
             padding-bottom: 10px;
             border-bottom: 1px solid #ccc; /* 分隔線 */
+
+
         }
 
         .plans-sub-nav ul {
@@ -77,6 +78,7 @@
             line-height: 30px;
             font-family: Noto Serif TC;
             margin-left: 30px;
+            margin-top: 8px;
         }
 
         .plans-sub-nav li a.active {
@@ -95,6 +97,7 @@
             background-color: #f8f8f8;
             color: #333;
         }
+
 
         /* kimono */
 
@@ -156,7 +159,10 @@
             line-height: 30px;
         }
 
-
+        .kimono-img.main-kimono-img {
+            /* border: 2px solid red; */
+            height: 300px;
+        }
         /* butt */
 
         .kimono-actions {
@@ -206,6 +212,13 @@
             color: #fffefe;
         }
 
+        .favorite-btn.active {
+            background-color: #d84370;
+            color: #fffefe;
+        }
+
+        
+
         .pagination-link {
             text-align: right;
             padding-top: 20px;
@@ -227,3 +240,192 @@
         .pagination-link img {
             height: 10px;
         }
+
+
+
+        /* carousel */
+
+        /* 輪播圖外層容器，設定寬高並隱藏溢出內容 */
+        .carousel-container {
+            max-width: 600px; /* 根據您的需求設定寬度 */
+            margin: 0 auto;
+            position: relative; /* 讓絕對定位的按鈕和指示器可以參考它 */
+            overflow: hidden; 
+        }
+
+        /* 圖片列表，讓所有圖片並排 */
+        .review-img-list {
+            display: flex; /* 關鍵：讓子元素並排 */
+            /* 這裡的寬度是所有圖片寬度的總和，但我們會用 JavaScript 來控制位移 */
+            transition: transform 0.5s ease-in-out; /* 關鍵：添加過渡效果，使切換平滑 */
+        }
+
+        /* 單張圖片的容器 */
+        .review-img {
+            min-width: 100%; /* 關鍵：讓每張圖片佔滿 .carousel-container 的寬度 */
+            box-sizing: border-box; 
+        }
+
+        /* 圖片本身 */
+        .review-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 隱藏非當前顯示的指示器圓點 */
+        .review-img:not(.active) {
+            display: none; /* 如果不用 transform 位移，可以用這個來隱藏 */
+            /* 但由於我們使用 `display: flex` + `transform` 實現平滑過渡，
+            這裡通常不需要額外的隱藏 CSS 
+            */
+        }
+
+    .banner-img {
+        width: 100%;
+        height: 350px; /* 桌面版高度 */
+        overflow: hidden; 
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+        object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+    }
+
+        /* ... 導航按鈕和指示器的樣式 (略) ... */
+
+/* ============================
+   RWD — Mobile (max-width: 768px)
+   ============================ */
+@media (max-width: 768px) {
+
+    .banner-img {
+        width: 100%;
+        height: 250px; /* 桌面版高度 */
+        overflow: hidden; 
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+        object-position: 30% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+    }
+
+    /* Banner */
+    .slogan-line1,
+    .slogan-line2 {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .slogan-line1 {
+        top: 50%;
+        left: 60%;
+    }
+
+    .slogan-line2 {
+        top: 68%;
+        left: 70%;
+        white-space: nowrap;
+
+    }
+
+    /* 主內容區寬度 */
+    main {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    /* 左側選單改成置頂 */
+    .plans-content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+
+    .plans-sub-nav {
+        width: 100%;
+        /* text-align: center; */
+        padding-top: 0;
+        
+    }
+
+    .plans-sub-nav ul {
+        margin: 10px 0 0 0;
+        margin-left: 10%;
+        gap: 10%;
+        display: flex;
+    }
+
+    .plans-sub-nav ul li {
+        /* text-align: center;。 */
+        margin: 5px 0;
+    }
+
+    
+
+    /* kimono 卡片改為直排 */
+    .kimono-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .kimono-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    /* 圖片區寬度調整 */
+    .kimono-img-group {
+        width: 100%;
+        justify-content: center;
+        /* flex-direction: column; */
+        /* align-items: center; */
+        
+    }
+
+    .kimono-img img {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .kimono-simg img {
+        margin-left: -20px;
+        width: 40px;
+    }
+
+    /* 文字區 */
+    .kimono-title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .kimono-txt {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 0 10px;
+        text-align: left;
+    }
+
+    /* 按鈕 */
+    .kimono-actions {
+        justify-content: center;
+    }
+
+    .kimono-actions button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+}
+
+

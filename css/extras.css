@@ -44,6 +44,7 @@ header {
             /* padding: 40px; */
             /* background-color: #fcfcfc;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+            background-color: transparent;
             border-radius: 5px;
             position: relative;
             z-index: 5;
@@ -315,3 +316,172 @@ header {
             margin-top: 15px;
             margin-right: 5px;
         }
+
+
+        .banner-img {
+            width: 100%;
+            height: 350px; /* 桌面版高度 */
+            overflow: hidden; 
+        }
+
+        .banner-img img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+        }
+/* ============================
+   RWD — Mobile (max-width: 768px)
+   只調整手機版，不變動原本的桌機版結構
+   ============================ */
+@media (max-width: 768px) {
+
+
+    .banner-img {
+        width: 100%;
+        height: 250px; /* 桌面版高度 */
+        overflow: hidden; 
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+        object-position: 30% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+    }
+
+    /* Banner 標語調整 (保留您原有的設定) */
+    .slogan-line1,
+    .slogan-line2 {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .slogan-line1 {
+        top: 50%;
+        left: 60%;
+    }
+
+    .slogan-line2 {
+        top: 68%;
+        left: 70%;
+        white-space: nowrap;
+    }
+
+    /* 確保 main 內容區在手機上佔滿寬度，移除居中限制 */
+    main {
+        width: 90%; 
+        margin: 20px auto; 
+    }
+
+    /* 結構調整：強制左側導航和右側內容垂直堆疊 */
+    .plans-content-wrapper {
+        flex-direction: column; 
+        gap: 20px;
+        /* 由於您的 HTML 中沒有為 plans-content-wrapper 設置 display: flex，
+           這一步可能不生效，但我們嘗試修正後面的子元素佈局。 */
+    }
+
+    /* 左側導航調整：置頂並橫向分散 */
+    .plans-sub-nav {
+        width: 100%; /* 佔滿整行 */
+        padding-top: 0;
+    }
+
+    .plans-sub-nav h2 {
+        
+    }
+    
+    .plans-sub-nav ul {
+        margin: 10px 0 0 0;
+        margin-left: 10%;
+        display: flex; /* 讓導航項目水平排列 */
+        justify-content: space-around; /* 平均分散空間 */
+        
+        list-style: none;
+    }
+    
+    
+    
+
+    /* 內容區塊調整：移除桌機版上的 '跳過' 樣式 */
+    .accessory-intro,
+    .photo-intro {
+        margin-top: 50px;
+        /* text-align: center; */
+        margin-left: 0; /* 關鍵：移除桌機版上為了避開左側導航而設置的邊距 */
+        width: 100%; /* 佔滿剩餘寬度 */
+        margin-bottom: 30px;
+    }
+
+    /* 配飾/攝影卡片改為單列垂直堆疊 */
+    .accessory-list,
+    .accessory-list2,
+    .photo-list {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 15px;
+    }
+    
+    /* 讓卡片本身在手機上以左右結構呈現 (圖片左，文字右) */
+    .accessory-card,
+    .photo-card {
+        width: 100%;
+        display: flex; 
+        /* flex-direction: row; */
+        gap: 15px;
+        align-items: flex-start; /* 讓內容靠上對齊 */
+        padding: 10px 0; 
+        border: 1px solid #eee; /* 可選：加邊框區分卡片 */
+        border-radius: 5px;
+    }
+
+    
+
+    /* 配飾圖片區 */
+    .accessory-img img {
+        width: 80px; /* 縮小配飾圖片 */
+        height: auto;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
+    /* 攝影方案圖示區 */
+    .plan-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
+    /* 文字內容區 */
+    .accessory-textcontent,
+    .plan-textcontent {
+        flex-grow: 1;
+        text-align: left;
+        padding-right: 10px;
+    }
+    
+    /* 調整文字樣式 */
+    .accessory-textcontent .title,
+    .plan-textcontent .title {
+        text-align: left; /* 確保靠左 */
+        font-size: 15px;
+        margin-top: 0;
+    }
+    
+    .accessory-textcontent .txt,
+    .plan-textcontent .txt {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+    
+    .accessory-textcontent .price,
+    .plan-textcontent .price {
+        text-align: right;
+        font-size: 14px;
+    }
+}

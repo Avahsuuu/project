@@ -5,112 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>news</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/news.css">
 
-    <style>
-
-    main {
-        position: relative;
-    }
-    .nwes-info-container {
-    height: 100%;
-    width: 70%;
-    max-width: 1200px;
-    /* margin: -100px auto 50px auto; */
-    /* 負邊距向上移動，覆蓋 banner */
-    margin: auto;
-    
-    padding: 40px;
-    /* background-color: #fcfcfc;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
-    border-radius: 5px;
-    position: relative;
-    z-index: 5;
-    } 
-
-    .banner-img img {
-        width: 100%;
-    }
-
-    .news-info {
-        display: flex;             
-        flex-direction: column;    
-        align-items: flex-end;
-    }
-    .news-item {
-        width: 70%;
-        display: flex;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-    }
-    .news-img img {
-        width: 180px;
-        margin-right: 20px;
-        margin-top: 20px;
-    }
-    .time {
-        font-family: "Noto Serif TC", serif;
-        font-size: 14px;
-        letter-spacing: 2px;
-        margin-left: 3px;
-    }
-
-    .news-textcontent .news-title {
-        font-family: "Noto Serif TC", serif;
-        font-size: 15px;
-        line-height: 30px;
-        margin-top: 20px;
-    }
-
-    .news-textcontent .news-txt {
-        font-size: 14px;
-        color: #717070;
-        line-height: 25px;
-        margin-top: 10px;
-    }
-
-    .txt-img img {
-        width: 13%; 
-        height: auto;
-    }
-    .title-content h3 {
-        font-family: noto serif tc;
-        width: 80px;
-        background-color: #f0f0f0;
-        color: #102859; /* 模擬圖片中的紅色高亮 */
-        border-left: 3px solid #230707;
-        font-weight: bold;
-        padding-left: 5px;
-        margin-left: 23px;
-        margin-top: 17px;
-        font-size: 14px;
-
-    }
-
-    .pagination-link {
-            color: #746e6e;
-            letter-spacing: 2px;
-            width: 200px;
-        }
-
-    .flower-img img {
-        height: auto;
-        width: 70%;
-        position: absolute;
-        bottom: 0;
-        left: -25%;
-    }
-
-    .pagination-link img{
-        height: 10px;
-
-    }
-
-
-    </style>
     
 
 </head>
@@ -126,7 +25,16 @@
                 </a>
             </div>
     
+            <label for="menu-switch" class="hb-toggle">
+                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                <input type="checkbox" id="menu-switch" class="menu-switch">
+            </label>
+    
+    
             <nav class="header-nav">
+    
+    
+    
                 <ul class="header-list">
                     <li class="header-item"><a href="about.html">關於我們</a></li>
                     <li class="header-item"><a href="booking.html">預約表單</a></li>
@@ -135,6 +43,7 @@
                     <li class="header-item"><a href="faq.html">常見問題</a></li>
                     <li class="header-item"><a href="location.html">門市資訊</a></li>
                 </ul>
+    
             </nav>
         </div>
     </header>
@@ -144,7 +53,7 @@
     <!-- banner -->
     <div class="banner">
         <div class="banner-img">
-            <img src="pic.other/banner-img-3.png" alt="">
+            <img src="pic.other/newsbanner-img.png" alt="">
         </div>
     </div>
 
@@ -156,12 +65,6 @@
     <!-- location-info -->
     <div class="nwes-info-container">
 
-        <div class="title-content">
-            <div class="txt-img">
-                <img src="pic.other/News-img.png" alt="">
-            </div>
-            <h3>最新消息</h3>
-        </div>
 
         <div class="news-info">
             <div class="news-item">
@@ -256,7 +159,7 @@
                     電話（台灣聯絡):0912-345-678<br>
                     預約信箱:blooming.florist@gmail.com
                 </address>
-                <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+                <div>服務時間：週一至週六 10:00-18:00 (京都當地時間)</div>
             </div>
         </div>
 

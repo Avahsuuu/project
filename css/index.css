@@ -1,0 +1,784 @@
+.banner {
+    width: 100%;
+    height: auto; /* 桌面版高度 */
+    overflow: hidden; 
+    margin-top: 20px;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    /* object-position: 40% 40%;  */
+    display: block;
+}
+
+.slogan {
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 40%; /* 你想放在圖片哪裡可以調整 */
+    left: 0;
+    width: 100%;
+    /* top: 90%; */
+    display: flex;
+    justify-content: space-between; /* 左右貼齊，中間自動空白 */
+    padding: 1.5% 2%; 左右空白（避免貼到邊界）
+    
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: "Noto Serif TC", serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* 文字不擋住按鈕（看你需不需要） */
+}
+
+
+
+
+
+/* ---------------- Intro ---------------- */
+.intro {
+    padding: 60px 20px;
+    text-align: center;
+    height: 190px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    top: -35px;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Noto Serif TC", serif;
+    line-height: 38px;
+}
+
+/* ---------------- Reviews ---------------- */
+
+h2 {
+    font-size: 18px;
+    font-family: "Noto Serif TC", serif;
+}
+
+.reviews h2 {
+    /* 確保也套用到 Reviews 區塊的 h2 */
+    /* 1. 設置為 Flex 容器並置中 */
+    display: flex;
+    align-items: center; /* 垂直置中文字和線條 */
+    justify-content: center; /* 水平置中整個元素 */
+    white-space: nowrap; /* 防止標題文字換行 */
+    margin: 0 auto 30px auto; /* 標題上下邊距 */
+    /* 確保字體是襯線體 */
+    font-family: "Noto Serif TC", serif;
+}
+
+/* 建立左邊的線條 (使用 ::before 偽元素) */
+.reviews h2::before {
+    content: "";
+    flex-grow: 1; /* 佔據所有左側可用空間 */
+    height: 0.5px; /* 線條厚度 */
+    background-color: #a0a0a0; /* 線條顏色 (較優雅的灰色) */
+    margin-right: 20px; /* 線條與文字之間的間距 */
+    max-width: 200px; /* 限制線條的最大寬度 */
+}
+
+/* 建立右邊的線條 (使用 ::after 偽元素) */
+
+.reviews h2::after {
+    content: "";
+    flex-grow: 1; /* 佔據所有右側可用空間 */
+    height: 0.5px;
+    background-color: #a0a0a0;
+    margin-left: 20px; /* 線條與文字之間的間距 */
+    max-width: 200px; /* 限制線條的最大寬度 */
+}
+
+
+
+
+
+.reviews {
+    padding: 100px 20px ;
+    text-align: center;
+    background-color: #ecedef;
+    border-radius: 20px
+    
+}
+
+.reviews-info-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.info-item {
+    color: #717070;
+    width: 320px;
+    height: 252px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.info-img img {
+    width: 45px;
+    border-radius: 25px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+.info-item .name {
+    position: absolute;
+    bottom: 20px;
+    left: 75px;
+}
+
+
+.arrow-icon-1 img {
+    margin-top: 100px;
+    background-color: #ca8d9b;
+    border-radius: 80px;
+    width: 35px;
+    opacity: 0.7;
+}
+
+.arrow-icon-2 img {
+    margin-top: 100px;
+    background-color: #ca8d9b;
+    border-radius: 80px;
+    width: 35px;
+    opacity: 0.7;
+    transform: scaleX(-1); 
+}
+
+
+
+/* ---------------- carousel ---------------- */
+.carousel-container {
+    max-width: 100%;
+    /* margin: 40px auto;; */
+    overflow: hidden; /* 隱藏超出容器的部分 */
+    padding: 10px 0;
+}
+
+
+.review-img-list {
+    display: flex;
+    white-space: nowrap;
+    margin-top: 40px;
+    width: fit-content;
+    
+    
+    justify-content: center;
+    transition: transform 0.8s ease-in-out; /* 讓圖片移動時有平滑效果 */
+
+
+    /* 套用動畫 */
+        animation: continuous-scroll 40s linear infinite; 
+        /* 30s: 速度 (數值越大越慢) */
+        /* linear: 勻速 */
+        /* infinite: 無限循環 */
+    
+}
+
+.review-img{
+    /* 關鍵：設定每張圖片容器佔總列表寬度的五分之一 */
+    width: 20%; 
+    /* 關鍵：防止瀏覽器在空間不足時壓縮圖片 */
+    flex-shrink: 1; 
+    height: 100%; /* 確保高度填滿父容器 */
+    /* margin: 0 15px */
+    margin-right: 20px;
+}
+
+/* 讓最後一個項目的右側間距消失 */
+.review-img-list .review-img:last-child{
+    margin-right: 0;
+}
+
+.review-img img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* 定義動畫 */
+    @keyframes continuous-scroll {
+        0% {
+            transform: translateX(0%); /* 從起始位置開始 */
+        }
+        100% {
+            transform: translateX(-50%); /* 這是無縫循環的關鍵點 */
+        }
+    }
+
+    /* (可選) 增加滑鼠懸停暫停功能
+    .carousel-container:hover .review-img-list {
+        animation-play-state: paused;
+    } */
+
+
+    @keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* 從下方 30px 位置開始 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);    /* 最終位置 */
+    }
+}
+/* ---------------- Products ---------------- */
+
+.featured-product {
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+
+h2{
+    font-size: 24px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.product-item {
+    width: 300px;
+    padding: 0;
+    position: relative;
+
+    /* opacity: 0; 初始隱藏 */
+     /* animation: fadeSlideUp 0.8s ease-out forwards; */
+}
+
+.product-item:hover {
+    /* 放大效果：將元素沿 X 軸和 Y 軸放大 1.05 倍 (即 5%) */
+    transform: scale(1.05); 
+}
+
+.product-img {
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    /* height: 320px; */
+    position: relative;
+    
+}
+
+.product-img img {
+    line-height: 0;
+    width: 100%;
+    /*height: 120%; */
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.product-item .product-tag {
+    position: relative;
+}
+
+
+/* 1. 外部 Div：負責水平居中 */
+.btn-outer-wrapper {
+    width: 110px; /* 必須設定寬度，讓 margin: auto; 生效 */
+    margin: 30px auto 0 auto; /* 30px 上邊距，auto 實現水平居中，0 下邊距 */
+    /* text-align: center; 不需要了，因為我們使用 margin: auto; */
+}
+
+/* 2. 內部 A 連結：負責按鈕外觀和點擊行為 */
+.view-all-btn {
+    /* 讓 A 連結佔滿外部 Div，並可設定寬高 */
+    display: block;
+
+    height: 30px;
+    width: 110px; /* 必須與外部 Div 寬度相同 (或不需要此行，因為是 block) */
+
+    /* 讓 'view' 文字在按鈕內部垂直和水平居中 */
+    line-height: 30px;
+    text-align: center;
+    font-family: "Noto Serif TC", serif;
+    padding: 0;
+    background: #e8cde6;
+    color: rgb(82, 81, 81);
+    border: none;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none; /* 移除連結底線 */
+}
+
+
+.view-all-btn:hover {
+    background-color: #8c4e5e; 
+    color: #ffffff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    cursor: pointer; 
+}
+
+
+.featured-product h2 {
+    /* 確保也套用到 Reviews 區塊的 h2 */
+    /* 1. 設置為 Flex 容器並置中 */
+    display: flex;
+    align-items: center; /* 垂直置中文字和線條 */
+    justify-content: center; /* 水平置中整個元素 */
+    white-space: nowrap; /* 防止標題文字換行 */
+    margin: 0 auto 30px auto; /* 標題上下邊距 */
+    /* 確保字體是襯線體 */
+    font-family: "Noto Serif TC", serif;
+}
+
+/* 建立左邊的線條 (使用 ::before 偽元素) */
+.featured-product h2::before,
+.reviews h2::before {
+    content: "";
+    flex-grow: 1; /* 佔據所有左側可用空間 */
+    height: 0.5px; /* 線條厚度 */
+    background-color: #a0a0a0; /* 線條顏色 (較優雅的灰色) */
+    margin-right: 20px; /* 線條與文字之間的間距 */
+    max-width: 200px; /* 限制線條的最大寬度 */
+}
+
+/* 建立右邊的線條 (使用 ::after 偽元素) */
+.featured-product h2::after,
+.reviews h2::after {
+    content: "";
+    flex-grow: 1; /* 佔據所有右側可用空間 */
+    height: 0.5px;
+    background-color: #a0a0a0;
+    margin-left: 20px; /* 線條與文字之間的間距 */
+    max-width: 200px; /* 限制線條的最大寬度 */
+}
+
+    .product-list {
+        width: 100%;
+        margin: auto;
+    }
+    .product-img {
+        width: 330px;
+    }
+
+
+    .product-item {
+        position: relative;
+        margin-right: 30px;
+    }
+    .product-label {
+        font-family: Noto Serif TC;
+        color: #fff;
+        z-index: 3;
+        --f: .6em; /* control the folded part*/
+        --r: .9em; /*control the ribbon shape*/
+        min-width: 40px;
+        min-height: 80px;
+        position: absolute;
+        top: -8px;
+        left: 20px;
+        padding: .2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #E5DA78;
+        border-right: var(--f) solid #0005;
+        border-bottom: var(--r) solid #0000;
+        clip-path: polygon(calc(100% - var(--f)) 0,0 0,0 100%,calc(50% - var(--f)/2) calc(100% - var(--r)),calc(100% - var(--f))
+        100%,calc(100% - var(--f)) var(--f),100% var(--f));
+    }
+
+    .product-txt {
+        margin-left: 3.8%;
+        margin-bottom: -1%;
+        background-color: #E5DA78;
+        background: rgba(229, 218, 120, 0.6);
+        width: 106%;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 10px 15px;
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        line-height: 25px;
+        color: #504F4F;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+    }
+    
+    .product-label-2 {
+        font-family: Noto Serif TC;
+        color: #fff;
+        z-index: 3;
+        --f: .6em; /* control the folded part*/
+        --r: .9em; /* control the ribbon shape */
+        min-width: 40px;
+        min-height: 80px;
+        position: absolute;
+        top: -8px;
+        left: 20px;
+        padding: .2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #C4CEBF;
+        border-right: var(--f) solid #0005;
+        border-bottom: var(--r) solid #0000;
+        clip-path: polygon(calc(100% - var(--f)) 0,0 0,0 100%,calc(50% - var(--f)/2) calc(100% - var(--r)),calc(100% - var(--f))
+        100%,calc(100% - var(--f)) var(--f),100% var(--f));
+    }
+
+    .product-txt-2 {
+        margin-left: 3.8%;
+        margin-bottom: -0.1%;
+        background-color: #C4CEBF;
+        background: rgba(196, 206, 191, 0.7);
+        width: 106.3%;
+        font-size: 16px;
+        margin-top: 10%;
+        padding: 10px 15px;
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        line-height: 25px;
+        color: #504F4F;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+
+    }
+    
+
+    .product-label-3 {
+        font-family: Noto Serif TC;
+        color: #fff;
+        z-index: 3;
+        --f: .6em; /* control the folded part*/
+        --r: .9em; /* control the ribbon shape */
+        min-width: 40px;
+        min-height: 80px;
+        position: absolute;
+        top: -8px;
+        left: 20px;
+        padding: .2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #C28F90;
+        border-right: var(--f) solid #0005;
+        border-bottom: var(--r) solid #0000;
+        clip-path: polygon(calc(100% - var(--f)) 0,0 0,0 100%,calc(50% - var(--f)/2) calc(100% - var(--r)),calc(100% - var(--f))
+        100%,calc(100% - var(--f)) var(--f),100% var(--f));
+    }
+
+    .product-txt-3 {
+        margin-left: 3.8%;
+        margin-bottom: -0.3%;
+        background-color: #C28F90;
+        background: rgba(191, 143, 144, 0.8);
+        width: 106%;
+        font-size: 16px;
+        margin-top: 10%;
+        padding: 10px 15px;
+        position: absolute;
+        bottom: 10px;
+        left: -10px;
+        line-height: 25px;
+        color: #504F4F;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+
+    }
+
+
+    
+    
+
+
+
+
+
+/* ---------------- Services ---------------- */
+.service {
+    margin-top: 50px;
+    padding: 0;
+    
+}
+.service-item-1 {
+    padding: 0;
+    margin-left: 40%;
+    height: 200px;
+    background-color: #F8F4F4;
+    border-radius: 10px;
+    position: relative;
+    /* margin: 50px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-item-2 {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 40%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #F8F4F4;
+    position: relative;
+    /* margin: 50px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+
+}
+.service-img-1 img{
+    width: 200px;
+    position: absolute;
+    right: 20%;
+    top: 40px;
+    border-radius: 10px;
+    
+}
+.service-img-2 img{
+    width: 200px;
+    position: absolute;
+    left: 20%;
+    top: -100px;
+    border-radius: 10px;
+    
+}
+
+.service-text-content{
+    padding: 15px;
+    position: relative;
+}
+
+.item-title-1 {
+    font-family: "Noto Serif TC", serif;
+    font-size: 18px;
+    text-align: start;
+    margin-left: 5%;
+    margin-top: 2%;
+    width: auto;
+
+}
+.item-title-2 {
+    font-family: "Noto Serif TC", serif;
+    font-size: 18px;
+    text-align: end;
+    margin-right: 5%;
+    margin-top: 2%;
+    width: auto;
+    margin-top: 0%;
+}
+
+
+.description-1 {
+    color: #535353;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 55%;
+    text-align: left;
+    position: absolute;
+    left: 15px;
+    font-family: "Noto sans TC", serif;
+    line-height: 30px;
+    margin-left: 5%;
+    margin-top: 2%;
+    width: auto;
+
+
+}
+.description-2 {
+    color: #535353;
+    font-size: 16px;
+    margin-top: 10px;
+    width: auto;
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    font-family: "Noto sans TC", serif;
+    line-height: 30px;
+    margin-right: 5%;
+    margin-top: 2%;
+    
+}
+
+
+.intro-txtcontent {
+    margin-top: 20px;
+    text-align: center;
+    color: #504F4F;
+
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: .5s;
+}
+
+
+.intro-txt {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -30px;
+    font-family: Noto Serif TC;
+    line-height: 1.8;
+
+}
+
+.mark1 {
+    margin-left: -550px;
+    transform: scaleX(-1);
+    font-size: 30px;
+}
+
+.mark2 {
+    margin-right: -550px;
+    margin-left: 0px;
+
+    transform: scaleY(-1);
+    font-size: 30px;
+    margin-top: -30px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+    html, body {
+        overflow-x: hidden;
+    }
+    .banner {
+        width: 100%;
+        height: 300px; /* 桌面版高度 */
+        overflow: hidden; 
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+        margin-top: 0px;
+        /* object-position: 40% 50%;  */
+        /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+    }
+
+    .intro-txt {
+        font-size: 14px;
+        
+        /* width: 0%; */
+
+    }
+
+    .mark1 {
+        margin-left: -350px;
+    }
+
+    .mark2 {
+        margin-right: 0px;
+        margin-left: 340px;
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+        
+    }
+
+    .featured-product h2, .reviews h2{
+        margin-top: -30px;
+        font-size: 22px;
+    }
+    .product-txt, .product-txt-2, .product-txt-3 {
+        font-size: 14px;
+    }
+    .reviews-info-list{
+        font-size: 14px;
+    }
+    .info-item:nth-child(2), .info-item:nth-child(3){
+        display: none;
+    }
+
+    .service-item-1 {
+        padding: 0;
+        margin-left: 10%;
+    }
+
+    .service-item-2 {
+        margin-top: 90px;
+        margin-bottom: 15%;
+        margin-right: 10%;
+        text-align: right;
+    }
+
+    .service-img-1 img{
+        width: 150px;
+        right: 5%;
+        top: 40px;
+    }
+    .service-img-2 img{
+        width: 150px;
+        left: 5%;
+        top: -60px;
+        /* display: none; */
+    }
+
+
+    .item-title-1 {
+        font-size: 16px;
+        margin-left: 0%;
+        margin-top: 2%;
+        width: 140px;
+
+    }
+    .item-title-2 {
+        font-size: 16px;
+        margin-right: 0%;
+        margin-left: 190px;
+        margin-top: 2%;
+        text-align: right;
+        width: 120px;
+        /* white-space: wrap; */
+    }
+
+
+    .description-1 {
+        font-size: 14px;
+        margin-top: 10px;
+        left: 15px;
+        line-height: 25px;
+        margin-left: 0%;
+        margin-top: 2%;
+        width: 150px;
+
+    }
+    .description-2 {
+        font-size: 14px;
+        margin-top: 10px;
+        right: 15px;
+        width: 150px;
+        margin-right: 0%;
+        line-height: 25px;
+        margin-top: 2%;
+    }
+
+
+    
+
+
+}

@@ -3,13 +3,14 @@
 }
 
 main {
-    width: 60%;
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     padding: 40px;
     border-radius: 5px;
     position: relative;
     z-index: 5;
+    background-color: transparent;
 }
 
 .faq-title {
@@ -40,11 +41,36 @@ main {
     line-height: 25px;
 }
 
+/* FAQ 問題欄位 */
 .faq-question {
     padding: 10px 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* 左文字，右箭頭 */
+    align-items: center;
 }
 
+/* 隱藏瀏覽器預設箭頭 */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+.faq-question::marker {
+    content: none;
+}
+
+/* 自訂箭頭 */
+.faq-question::after {
+    content: "▼"; /* 向下箭頭 */
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* 展開時箭頭旋轉 */
+.faq-item[open] .faq-question::after {
+    transform: rotate(180deg);
+}
+
+/* Q 標籤 */
 .faq-question > span:first-child {
     font-family: Noto Serif TC;
     background-color: #FFFDFD;
@@ -56,15 +82,11 @@ main {
     align-items: center;
 }
 
-
-
-
 .faq-item .faq-question {
     background-color: #D198A0; 
     color: rgb(77, 71, 71);
     transition: background-color 0.3s; 
 }
-
 
 .faq-item[open] .faq-question {
     background-color: #C5D5E6;
@@ -87,4 +109,39 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 14px;
+}
+
+/* ===== 手機版 ===== */
+@media screen and (max-width:768px) {
+    .banner-img img {
+        height: 350px;
+        margin-top: 60px;
+        content: url("../pic.other/news-banner-simg.png");
+        width: 100%;
+        height: auto;
+        object-fit: cover;       /* 讓圖片像背景一樣填滿 */
+        object-position: left top;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px;   /* 手機版縮小 padding */
+    }
+
+    /* 內文滿版 */
+    .intro-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* 問答區滿版 */
+    .faq-item {
+        margin: 15px 0;     /* 移除左右 10% */
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .faq-answer {
+        padding: 10px 20px; /* 不讓內容太擠 */
+    }
 }

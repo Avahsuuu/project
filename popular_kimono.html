@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>popular_kimono</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="kimono.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/reset-plan.css">
+    <link rel="stylesheet" href="./css/kimono.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -24,7 +24,7 @@
             background-size: 150px 150px;
             background-repeat: repeat;
             color: #333;
-            background-color: #FFF9F9;
+            /* background-color: #FFF9F9; */
             position: relative; 
             z-index: 1;
 
@@ -65,7 +65,7 @@
             background-position: center center;
 
             /* 可選: 設置一個背景顏色，以防圖片加載失敗或圖片透明處 */
-            background-color: #f0f0f0; 
+            /* background-color: #f0f0f0;  */
         }
 
         /* body {
@@ -83,15 +83,25 @@
 <body>
     
     
+    <!-- Header -->
     <header>
         <div class="header-container">
-            
             <div class="logo">
                 <a href="index.html">
                     <img src="pic.index/logo.png" alt="">
                 </a>
             </div>
+    
+            <label for="menu-switch" class="hb-toggle">
+                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                <input type="checkbox" id="menu-switch" class="menu-switch">
+            </label>
+    
+    
             <nav class="header-nav">
+    
+    
+    
                 <ul class="header-list">
                     <li class="header-item"><a href="about.html">關於我們</a></li>
                     <li class="header-item"><a href="booking.html">預約表單</a></li>
@@ -100,6 +110,7 @@
                     <li class="header-item"><a href="faq.html">常見問題</a></li>
                     <li class="header-item"><a href="location.html">門市資訊</a></li>
                 </ul>
+    
             </nav>
         </div>
     </header>
@@ -125,7 +136,7 @@
                 <h2>方案與服務詳情</h2>
                 <ul>
                     <li><a href="basic_plan.html">方案介紹</a></li>
-                    <li><a href="popular_kimono.1.html" class="active">熱門和服款式</a></li>
+                    <li><a href="popular_kimono.html" class="active">熱門和服款式</a></li>
                     <li><a href="extras.html">攝影、配件加購</a></li>
                 </ul>
             </nav>
@@ -139,7 +150,7 @@
                         </div>
                         <div class="kimono-sub-imgs">
                             <div class="kimono-simg">
-                                <img src="pic.kimono/kimono-img1.02.png" alt="夏日花火浪漫小圖1">
+                                <img src="pic.kimono/kimono-img1.01.png" alt="夏日花火浪漫小圖1">
                             </div>
                             <div class="kimono-simg">
                                 <img src="pic.kimono/kimono-img1.02.png" alt="夏日花火浪漫小圖2">
@@ -159,9 +170,11 @@
                             這是一款專為夏日祭典打造的清涼元氣浴衣。採用輕薄透氣材質，視覺上運用日系向日葵與水波紋設計，帶來清爽感。穿上它，您將感受到視覺與體感的雙重降溫效果。鮮明的色彩讓您在人群中脫穎而出，享受最無拘束的夏日京都。
                         </div>
                         <div class="kimono-actions">
-                            <button class="bookingnow-btn">
-                                <i class="fa-solid fa-calendar-check"></i> 立即預約
-                            </button>
+                            <a href="./booking.html">
+                                <button class="bookingnow-btn">
+                                    <i class="fa-solid fa-calendar-check"></i> 立即預約
+                                </button>
+                            </a>
                             <button class="favorite-btn">
                                 <i class="fa-solid fa-heart"></i> 加入收藏
                             </button>
@@ -194,9 +207,11 @@
                         <div class="kimono-txt">這是一款靜謐雅緻的經典款式，完美融入京都古都的幽靜風景。
                             採用柔和的米白底色，搭配細膩的金色錦鯉圖騰，象徵吉祥與富足，體現出質感內斂的日式傳統品味。</div>
                         <div class="kimono-actions">
+                        <a href="./booking.html">
                             <button class="bookingnow-btn">
                                 <i class="fa-solid fa-calendar-check"></i> 立即預約
                             </button>
+                        </a>
                             <button class="favorite-btn">
                                 <i class="fa-solid fa-heart"></i> 加入收藏
                             </button>
@@ -229,9 +244,11 @@
                         <div class="kimono-txt">採用經典紅白配色，線條簡潔卻充滿戲劇張力。大朵的緋紅花紋與精緻的工藝細節，讓穿著者具備強烈的視覺焦點。它是情侶寫真或個人藝術照的首選。
                         </div>
                         <div class="kimono-actions">
-                            <button class="bookingnow-btn">
-                                <i class="fa-solid fa-calendar-check"></i> 立即預約
-                            </button>
+                            <a href="./booking.html">
+                                <button class="bookingnow-btn">
+                                    <i class="fa-solid fa-calendar-check"></i> 立即預約
+                                </button>
+                            </a>
                             <button class="favorite-btn">
                                 <i class="fa-solid fa-heart"></i> 加入收藏
                             </button>
@@ -266,9 +283,12 @@
                             這是一款充滿櫻花詩意的恬靜浴衣，捕捉日式浪漫的優雅瞬間。以經典的和風櫻花為主要圖案，搭配素雅底色，營造出溫柔而內斂的氛圍。輕柔的布料與簡約的設計，讓您在漫步京都小巷時，能感受微風拂過的清爽與自在。
                         </div>
                         <div class="kimono-actions">
-                            <button class="bookingnow-btn">
+                            <a href="./booking.html">
+                                <button class="bookingnow-btn">
                                 <i class="fa-solid fa-calendar-check"></i> 立即預約
                             </button>
+                            </a>
+                            
                             <button class="favorite-btn">
                                 <i class="fa-solid fa-heart"></i> 加入收藏
                             </button>
@@ -300,7 +320,7 @@
                         電話（台灣聯絡):0912-345-678<br>
                         預約信箱:blooming.florist@gmail.com
                     </address>
-                    <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+                    <div>服務時間：週一至週六 10:00-18:00 (京都當地時間)</div>
                 </div>
             </div>
     
@@ -311,6 +331,42 @@
             </div>
         </div>
     </footer>
+
+    
+
+    <script>
+        //==== 大圖小圖切換 ===//
+        document.querySelectorAll(".kimono-card").forEach(card => {
+                const bigImg = card.querySelector(".main-kimono-img img");
+                const smallImgs = card.querySelectorAll(".kimono-simg img");
+
+                smallImgs.forEach(small => {
+                    small.addEventListener("click", () => {
+
+                        // 加上淡出
+                        bigImg.classList.add("fade-out");
+
+                        // 換圖後淡入
+                        setTimeout(() => {
+                            bigImg.src = small.src;
+                            bigImg.classList.remove("fade-out");
+                        }, 200);
+                    });
+                });
+            });
+
+
+            //==== 按鈕點擊後顏色固定 ====//
+            const btns = document.querySelectorAll(".favorite-btn");
+
+                btns.forEach(btn => {
+                    btn.addEventListener("click", function () {
+                        btn.classList.toggle("active");
+                    });
+                });
+
+
+    </script>
 </body>
 
 </html>

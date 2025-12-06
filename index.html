@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    
 
 </head>
 
@@ -20,10 +22,19 @@
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                <img src="pic.index/logo.png" alt="">
+                    <img src="pic.index/logo.png" alt="">
                 </a>
             </div>
-
+    
+            <!-- Hidden checkbox -->
+            <input type="checkbox" id="menu-switch" class="menu-switch">
+    
+            <!-- Hamburger icon -->
+            <label for="menu-switch" class="hb-toggle">
+                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+            </label>
+    
+            <!-- Nav -->
             <nav class="header-nav">
                 <ul class="header-list">
                     <li class="header-item"><a href="about.html">關於我們</a></li>
@@ -38,76 +49,64 @@
     </header>
 
 
+
+            <nav class="header-nav">
+
+            
+
+                <ul class="header-list">
+                    <li class="header-item"><a href="about.html">關於我們</a></li>
+                    <li class="header-item"><a href="booking.html">預約表單</a></li>
+                    <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
+                    <li class="header-item"><a href="news.html">最新消息</a></li>
+                    <li class="header-item"><a href="faq.html">常見問題</a></li>
+                    <li class="header-item"><a href="location.html">門市資訊</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+
     <!-- Banner -->
     <div class="banner">
-        <div class="slogan">
-            <div class="left">細品歲月溫柔，感受傳統餘韻</div>
-            <div class="right">讓每一次的轉身都成為風景</div>
-        </div>
-        <img src="pic.index/banner-img-fina.png" alt="">
+        <!-- <div class="slogan"> -->
+            <!-- <div class="slogan-01">細品歲月溫柔，感受傳統餘韻</div>
+            <div class="slogan-02">讓每一次的轉身都成為風景</div> -->
+        <!-- </div> -->
+        <img src="pic.index/banner-img.png" alt="">
+    </div>
+
+    
+    <!-- Lead-in -->
+
+    <div class="intro-txtcontent">
+        <div class="mark1">”</div>
+        <div class="intro-txt">一襲和服，一卷千年時光繪卷。<br>
+        在 Harumi，您穿上的不僅是布料，更是京都優雅的精髓。<br>
+        我們精選擁有故事的古老紋樣，細心打點每一處雅緻配飾，<br>
+        讓每一次的轉身，都是對傳統文化最美好的致敬。</div><br>
+        <div class="mark2">”</div>
+
+
     </div>
 
 
-    <!-- Intro -->
+
+
+
+    <!-- Intro
     <div class="intro">
         <p>
             每一次邂逅都是獨一無二的浪漫<br>
             從古典優雅的振袖到輕盈日常的浴衣<br>
-            <!-- 每一件都訴說著不同的京都故事<br> -->
+            <!-- 每一件都訴說著不同的京都故事<br> 
             讓這份精選的雅緻...成為古都裡最動人的註腳
         </p>
-    </div>
+    </div> -->
 
 
-    <!-- Reviews -->
-    <section class="reviews">
-        <h2>顧客體驗回饋一覽</h2>
-
-        <div class="reviews-info-list">
-
-            <div class="arrow-icon-1">
-                <img src="pic.index/arrow-img.svg" alt="">
-            </div>
-
-            <div class="info-item">
-                <p>以前總覺得穿和服會緊繃不舒服，但 Harumi 完全顛覆了我的想像！著裝老師手法專業又快速，非常注重舒適度，我在戶外拍照一整天都沒有覺得悶熱。最棒的是全程中文溝通無障礙，我在台灣也能享受到高水準的日式服務，強力推薦！</p>
-                <div class="info-img">
-                    <img src="pic.index/info-img1.png">
-                    <div class="name">Sophia Harris</div>
-                </div>
-            </div>
-
-            <div class="info-item">
-                <p>Harumi 的和服款式有品味，選擇豐富，店員還能根據我們的膚色和台南的古都街景給出超專業的搭配建議。</p>
-                <div class="info-img">
-                    <img src="pic.index/info-img2.png">
-                    <div class="name">Emily Chen</div>
-                </div>
-            </div>
-
-            <div class="info-item">
-                <p>帶著長輩出來玩，最怕花時間處理瑣碎細節。Harumi 的一站式服務真的太貼心了！選衣、著裝、到出門，流程順暢又快速。有免費行李寄放，讓我們可以輕鬆出遊。這種省心又高品質的體驗，是下次再訪的唯一理由！</p>
-                <div class="info-img">
-                    <img src="pic.index/info-img3.png">
-                    <div class="name">Emily Chen</div>
-                    </div>
-                </div>
-
-                <div class="arrow-icon-2">
-                    <img src="pic.index/arrow-img.svg" alt="">
-                </div>
-            </div>
-
-        </div>
-
-        <div class="review-img-list">
-            <div class="review-img"><img src="pic.index/review-img1.jpg"></div>
-            <div class="review-img"><img src="pic.index/review-img2.jpg"></div>
-            <div class="review-img"><img src="pic.index/review-img3.png"></div>
-            <div class="review-img"><img src="pic.index/review-img4.png"></div>
-            <div class="review-img"><img src="pic.index/review-img5.png"></div>
-        </div>
-    </section>
+    
 
 
     <!-- Products -->
@@ -118,27 +117,84 @@
 
             <div class="product-item">
                 <div class="product-label">夏<br>日<br>浴<br>衣</div>
-                <div class="product-img"><img src="pic.index/product-img-wtag1.png"></div>
+                <div class="product-img"><img src="pic.index/product(new)-img.png"></div>
                 <div class="product-txt">鮮豔圖騰與簡約色彩交織，一穿上，立刻融入日本的熱鬧祭典，成為人群中最耀眼的風景</div>
             </div>
 
 
             <div class="product-item">
                 <div class="product-label-2">經<br>典<br>和<br>服</div>
-                <div class="product-img"><img src="pic.index/product-img-wtag2.png"></div>
-                <div class="product-txt">適合全年穿著的基礎款式，以優雅姿態穿梭於神社與庭院，讓每一次轉身都留下美麗的足跡</div>
+                <div class="product-img"><img src="pic.index/product(new)-img2.png"></div>
+                <div class="product-txt-2">適合全年穿著的基礎款式，以優雅姿態穿梭於神社與庭院，讓每一次轉身都留下美麗的足跡</div>
             </div>
 
             <div class="product-item">
                 <div class="product-label-3">華<br>麗<br>振<br>袖</div>
-                <div class="product-img"><img src="pic.index/product-img-wtag3.png"></div>
-                <div class="product-txt">繁複圖案從肩部延伸至裙襬，每一件都是藝術品，穿上它，無需言語，您就是全場的焦點</div>
+                <div class="product-img"><img src="pic.index/product(new)-img3.png"></div>
+                <div class="product-txt-3">繁複圖案從肩部延伸至裙襬，每一件都是藝術品，穿上它，無需言語，您就是全場的焦點</div>
             </div>
 
         </div>
 
         <div class="btn-outer-wrapper">
-            <a href="popular_kimono.1.html" class="view-all-btn">view</a>
+            <a href="popular_kimono.html" class="view-all-btn">view</a>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <h2>顧客體驗回饋一覽</h2>
+    
+        <div class="reviews-info-list">
+    
+            <div class="arrow-icon-1">
+                <img src="pic.index/arrow-img.svg" alt="">
+            </div>
+    
+            <div class="info-item">
+                <p>著裝老師手法專業又快速，非常注重舒適度，我在戶外拍照一整天都沒有覺得悶熱。最棒的是全程中文溝通無障礙，我在台灣也能享受到高水準的日式服務，強力推薦！</p>
+                <div class="info-img">
+                    <img src="pic.index/info-img1.png">
+                    <div class="name">Sophia Harris</div>
+                </div>
+            </div>
+    
+            <div class="info-item">
+                <p>Harumi 的和服款式有品味，選擇豐富，店員還能根據我們的膚色和台南的古都街景給出超專業的搭配建議。</p>
+                <div class="info-img">
+                    <img src="pic.index/info-img3.png">
+                    <div class="name">Ethan Miller</div>
+                </div>
+            </div>
+    
+            <div class="info-item">
+                <p>帶著長輩出來玩，最怕花時間處理瑣碎細節。Harumi 的一站式服務真的太貼心了！選衣、著裝、到出門，流程順暢又快速。</p>
+                <div class="info-img">
+                    
+                    <img src="pic.index/info-img2.png">
+                    <div class="name">Emily Chen</div>
+                </div>
+            </div>
+    
+            <div class="arrow-icon-2">
+                <img src="pic.index/arrow-img.svg" alt="">
+            </div>
+        </div>
+    
+        </div>
+        <div class="carousel-container">
+            <div class="review-img-list">
+                <div class="review-img"><img src="pic.index/review-img1.jpg"></div>
+                <div class="review-img"><img src="pic.index/review-img2.jpg"></div>
+                <div class="review-img"><img src="pic.index/review-img3.png"></div>
+                <div class="review-img"><img src="pic.index/review-img4.png"></div>
+                <div class="review-img"><img src="pic.index/review-img5.png"></div>
+                <div class="review-img"><img src="pic.index/review-img1.jpg"></div>
+                <div class="review-img"><img src="pic.index/review-img2.jpg"></div>
+                <div class="review-img"><img src="pic.index/review-img3.png"></div>
+                <div class="review-img"><img src="pic.index/review-img4.png"></div>
+                <div class="review-img"><img src="pic.index/review-img5.png"></div>
+            </div>
         </div>
     </section>
 
@@ -158,6 +214,7 @@
             
             <div class="service-img-1">
                 <img src="pic.index/service-img1.png" alt="">
+                
             </div>
 
         </div>
@@ -195,7 +252,7 @@
                         電話（台灣聯絡):0912-345-678<br>
                         預約信箱:blooming.florist@gmail.com
                     </address>
-                    <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+                    <div>服務時間：週一至週六 10:00-18:00 (京都當地時間)</div>
                 </div>
             </div>
     
@@ -207,8 +264,8 @@
         </div>
     </footer>
 
-    
-
+        
+<!-- <script src="./js/index.js"></script> -->
 </body>
 
 </html>

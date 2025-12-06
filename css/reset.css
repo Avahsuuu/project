@@ -6,7 +6,8 @@
 
         body {
             font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-            background-image: url("pic.other/repeat-bg.png");
+            background-image: url("../pic.other/repeat-bg.png");
+            
             /* background-size: cover; */
             background-position: center;
             /* background-repeat: no-repeat; */
@@ -21,6 +22,22 @@
             flex-direction: column; 
             min-height: 100vh; /* 至少佔滿一個視口高度 */
         }
+
+        /* 設定整個網頁的預設游標 */
+        /* body { */
+            /* 1. url('圖片路徑'): 指定自定義游標圖片的路徑。
+            2. X Y: 設置熱點（hotspot）座標。這是游標的實際點擊點，
+                例如 '8 8' 是將游標中心點設為熱點（對於 16x16 圖片）。
+            3. default: 作為備用/回退（fallback）游標，如果圖片載入失敗，
+                就會顯示瀏覽器的預設箭頭。
+            */
+            /* cursor: url('../pic.other/cursor-img-click.png') 8 8, default; */
+        /* } */
+
+        /* 改變連結（<a> 標籤）在滑過時的游標 */
+        /* a {
+            cursor: url('../pic.other/cursor-img-hana.png') 8 8, pointer; /* pointer 也是一個常用的回退選項 */
+        /* } */ 
 
         body::before {
             content: ""; 

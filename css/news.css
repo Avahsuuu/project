@@ -1,0 +1,176 @@
+main {
+        position: relative;
+    }
+    .nwes-info-container {
+    height: 100%;
+    width: 70%;
+    max-width: 1200px;
+    /* margin: -100px auto 50px auto; */
+    /* 負邊距向上移動，覆蓋 banner */
+    margin: auto;
+    
+    padding: 40px;
+    /* background-color: #fcfcfc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    position: relative;
+    z-index: 5;
+    } 
+
+    .banner-img img {
+        width: 100%;
+    }
+
+    .news-info {
+        display: flex;             
+        flex-direction: column;    
+        align-items: flex-end;
+    }
+    .news-item {
+        width: 70%;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .news-img img {
+        width: 180px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .time {
+        font-family: "Noto Serif TC", serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-left: 3px;
+    }
+
+    .news-textcontent .news-title {
+        font-family: "Noto Serif TC", serif;
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+
+    .news-textcontent .news-txt {
+        font-size: 14px;
+        color: #717070;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+
+    .txt-img img {
+        width: 13%; 
+        height: auto;
+    }
+    .title-content h3 {
+        font-family: noto serif tc;
+        width: 80px;
+        background-color: #f0f0f0;
+        color: #102859; /* 模擬圖片中的紅色高亮 */
+        border-left: 3px solid #230707;
+        font-weight: bold;
+        padding-left: 5px;
+        margin-left: 23px;
+        margin-top: 17px;
+        font-size: 14px;
+
+    }
+
+    .pagination-link {
+            color: #746e6e;
+            letter-spacing: 2px;
+            width: 200px;
+            text-align: right;
+    }
+
+    .flower-img img {
+        height: auto;
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        left: -25%;
+    }
+
+    .pagination-link img{
+        height: 10px;
+        
+    }
+
+    /* ==========================
+   RWD - Mobile (max-width: 768px)
+   ========================== */
+@media (max-width: 768px) {
+
+
+    .banner-img img {
+        height: 350px;
+        margin-top: 60px;
+        content: url("../pic.other/news-banner-simg.png");
+        width: 100%;
+        height: auto;
+        object-fit: cover;       /* 讓圖片像背景一樣填滿 */
+        object-position: left top;
+    }
+    /* 版心縮窄 */
+    .nwes-info-container {
+        width: 90%;
+        padding: 20px;
+        margin: auto;
+    }
+
+    /* news-info 的右對齊取消 */
+    .news-info {
+        align-items: center;
+    }
+
+    /* 單卡 改直式 */
+    .news-item {
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+
+    .news-img{
+        text-align: center;
+    }
+    /* 圖片改滿版 */
+    .news-img img {
+        width: 80%;
+        margin: 0 0 10px 0;
+    }
+
+    /* 日期位置微調 */
+    .time {
+        margin: 5px 0 15px;
+        font-size: 12px;
+    }
+
+    /* 標題更好閱讀 */
+    .news-textcontent .news-title h4 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* 內文縮小一點 */
+    .news-textcontent .news-txt {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    /* next page 位置 */
+    .pagination-link {
+        width: 100%;
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    /* 裝飾花朵圖重新定位（避免壓到內容） */
+    .flower-img img {
+        /* width: 100%;
+        position: static;
+        margin-top: 30px; */
+        
+    }
+}

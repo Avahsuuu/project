@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="booking.css">
+    <title>form</title>
+
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/booking.css">
+    
     
     
     <body>
@@ -18,7 +20,7 @@
             }
 
             .body-container {
-            width: 70%;
+            width: 80%;
             max-width: 1200px;
             /* margin: -100px auto 50px auto; */
             /* 負邊距向上移動，覆蓋 banner */
@@ -41,38 +43,48 @@
                         <img src="pic.index/logo.png" alt="">
                     </a>
                 </div>
-    
+        
+                <label for="menu-switch" class="hb-toggle">
+                    <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                    <input type="checkbox" id="menu-switch" class="menu-switch">
+                </label>
+        
+        
                 <nav class="header-nav">
+        
+        
+        
                     <ul class="header-list">
                         <li class="header-item"><a href="about.html">關於我們</a></li>
-                        <li class="header-item"><a href="Reservation.html">預約表單</a></li>
+                        <li class="header-item"><a href="booking.html">預約表單</a></li>
                         <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
                         <li class="header-item"><a href="news.html">最新消息</a></li>
                         <li class="header-item"><a href="faq.html">常見問題</a></li>
                         <li class="header-item"><a href="location.html">門市資訊</a></li>
                     </ul>
+        
                 </nav>
             </div>
         </header>
         <!-- Banner -->
         <div class="banner">
-            <img src="pic.other/banner-img-3.png" alt="">
+            <img src="pic.other/booknowimg.png" alt="">
         </div>
         <!-- Reservation -->
         <main class="reservation-bg">
             <div class="body-container">
                 
-                <div class="booknow">
+                <!-- <div class="booknow">
                     
                         <div class="booknow-img">
                             <img src="pic.other/Book-img.png" alt="">
                         </div>
                         <h3>立即預約</h3>
                     
-                </div>
+                </div> -->
                 <div class="reservation-wrapper">
                     
-                    <div class="step-img">
+                    <div class="step-img" style="margin-left: 21%;">
                         <img src="pic.other/form-step-img.png" alt="">
                     </div>
                     <div class="booking-steps">
@@ -102,10 +114,12 @@
                         <div class="form-group">
                             <label>人數*</label>
                             <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                <option>1人</option>
+                                <option>2人</option>
+                                <option>3人</option>
+                                <option>4人</option>
+                                <option>5人以上(含)</option>
+
                             </select>
                         </div>
                     </div>
@@ -143,29 +157,43 @@
                         <label>基本方案選項*</label>
                         <select>
                             <option>請選擇方案</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option>輕快午後半日租</option>
+                            <option>古都全日遊人氣首選</option>
+                            <option>夜間漫步頂級享受</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>加購需求</label>
                         <select>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option>請選擇是否加購</option>
+                            <option>基本配飾</option>
+                            <option>攝影方案</option>
+                            
                         </select>
                     </div>
                     <!-- ====== 注意事項 ====== -->
                     <div class="notice-box">
-                        <p><strong>⚠︎ 報名前請留意以下事項：</strong></p>
+                        <p>
+                            <strong>⚠︎ 報名前請留意以下事項：</strong>
+                        </p>
                         <ul>
                             <li>請提前 10 分鐘到場。</li>
                             <li>本店採預約制，若需取消請於 24 小時前通知。</li>
                             <li>若遲到超過 15 分鐘，可能影響課程時間。</li>
                             <li>孕婦、特殊疾病者請主動告知。</li>
+                            <li>建議服裝與準備： 為加快穿著流程，請在來店前穿著V領或大圓領的內搭衣物。女性客戶建議不要佩戴貴重首飾或複雜的髮飾。</li>
+                            <li>造型服務內容： 基礎方案（如**「輕快午後半日租」**）通常包含基礎髮型，若需專業妝容或精緻髮飾，請務必在預約時加購 「專業造型與攝影加購」 服務。專業造型服務會根據您的臉型和所選和服風格進行設計，需預留約 30-60 分鐘的造型時間。
+                            </li>
+                            <li>髮飾租借： 我們的髮飾皆為精心搭配的專業單品，建議您可加購 「季節花卉髮夾」或「奢華日式髮簪」，讓整體和服造型更加完整與亮眼。</li>
+                            <li>歸還時間： 所有和服與配件（包括木屐、包袋、紙傘等）必須在您選擇的方案規定時間內歸還。例如，**「經典全日」**方案需在當日晚上 8 點前歸還。</li>
+                            <li>延遲歸還： 若超過規定的最晚歸還時間，我們將會收取每小時 NT$ 300 的延遲費用，若延遲超過次日清晨，則視為另一天租賃。</li>
+                            <li>輕微髒污： 一般的輕微污漬（如灰塵、食物小污點）屬於正常耗損，我們不會額外收費。</li>
+                        
                         </ul>
+                        
                     </div>
+
+                    
                     <button class="submit-btn">提 交</button>
                 </div>
         </main>

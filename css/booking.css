@@ -3,39 +3,37 @@
                 max-width: 600px;
                 padding: 20px 40px;
                 font-family: "Noto Serif TC", serif; 
-                margin-top: 100px;
             }
     
             /* ==== background ==== */
         
-    
+
+            
             .body-container {
-                margin: 40px auto;
-                padding: 0 300px 0 300px;
                 display: flex;
+                justify-content: center; /* 讓子元素在主軸（水平）上置中 */
+                align-items: flex-start; /* 讓子元素在交叉軸（垂直）上靠上對齊，保持預設流動 */
             }
 
             .booking-steps {
                 display: flex;
-                gap: 14%;
+                gap: 20%;
                 margin-top: -10px;
-                margin-left: 25%;
+                margin-left: 22%;
                 font-size: 12px;
             } 
 
-            .booknow-img {
-                margin-bottom: 20px;
-            }
+            
     
             /* ==== bookNow 左側欄 ==== */
-            .bookNow {
+            /* .bookNow {
                 width: 260px;
                 padding-top: 10px;
                 flex-shrink: 0;
                 text-align: left;
             }
     
-            /* 選單列表 */
+            /* 選單列表 
             .booknow h3 {
                 font-family: noto serif tc;
                 width: 80px;
@@ -47,20 +45,20 @@
                 margin-left: 23px;
                 margin-top: 17px;
                 font-size: 14px;
-            }
+            }*/
             
     
             
 
-            .bookNow a:hover {
+            /*.bookNow a:hover {
                 border-left-color: #96A1B6;
-                /* 跟圖片類似的灰色 */
-            }
+                跟圖片類似的灰色 
+            }*/
     
-            /* 若要讓圖片與文字間距更接近 */
+            /* 若要讓圖片與文字間距更接近 
             .booknow-img img {
                 width: 200px;
-            }
+            } */
     
             /* ==== 頁面標題 ==== */
             /* .page-title {
@@ -72,21 +70,11 @@
                 letter-spacing: 1px;
             } */
             
-            .step-img img{
-                width: 250px;
-                height: auto;
-                margin-left: 25%;
-            }
-    
+            
+
             /* ==== 區塊標題 ==== */
             .section-title {
-                display: inline-block;
-                background-color: #575252;
-                padding: 6px 18px;
-                border-radius: 20px;
-                font-size: 14px;
-                font-family: "Noto Serif TC", serif;
-                color: white;
+                width: 200px;
             }
     
             .section-line {
@@ -145,7 +133,7 @@
                 border-radius: 6px;
                 border: 1px solid #c8c8c8;
                 font-size: 11px;
-                background: #f8f8f8;
+                background-color: #f8f8f8;
                 box-sizing: border-box;
                 color: #4c4c4c;
             }
@@ -168,6 +156,9 @@
                 line-height: 1.8;
                 font-size: 12px;
                 color: #6b6366;
+
+                height: 150px;     /* 固定區域大小 */
+                overflow-y: auto
             }
     
             .notice-box ul {
@@ -193,3 +184,142 @@
             .submit-btn:hover {
                 background: #c19aa9;
             }
+
+
+
+
+/* RWD 未修改 */
+
+/* ========================================================= */
+/* RWD 響應式設計 (Media Queries)            */
+/* ========================================================= */
+
+/* 當螢幕寬度小於或等於 768px 時 (常用於平板和手機) 
+*/
+@media (max-width: 768px) {
+
+    .banner img {
+        height: 350px;
+        margin-top: 60px;
+        content: url("../pic.other/news-banner-simg.png");
+        width: 100%;
+        height: auto;
+        object-fit: cover;       /* 讓圖片像背景一樣填滿 */
+        object-position: left top;
+    }
+    
+    /* 1. 全局容器調整 */
+    .body-container {
+        width: 90%; /* 讓容器佔滿大部分螢幕寬度 */
+        padding: 20px; /* 減少內邊距 */
+        box-shadow: none; /* 在小螢幕上移除陰影，讓視覺更簡潔 */
+    }
+
+    /* 2. 表單容器調整 */
+    .reservation-wrapper {
+        max-width: none; /* 取消最大寬度限制 */
+        padding: 0; /* 移除容器內邊距，利用 body-container 的 padding */
+    }
+
+    /* 3. 預約步驟調整 */
+    .step-img {
+        /* 將步驟圖片置中 */
+        margin-left: 0 !important; /* 覆蓋內聯樣式 */
+        text-align: center;
+    }
+    .step-img img {
+        width: 90%; /* 讓圖片寬度適應小螢幕 */
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* 步驟文字排版調整 */
+    .booking-steps {
+        margin-left: 0; /* 取消左側偏移 */
+        gap: 10%; /* 減少步驟之間的間距 */
+        justify-content: center; /* 置中 */
+        margin-top: 5px;
+        font-size: 11px; /* 縮小字體 */
+    }
+
+    /* 4. 表單欄位排版調整 (關鍵 RWD 調整) */
+    .form-row {
+        flex-direction: column; /* 將水平排列的欄位改為垂直堆疊 */
+        gap: 0; /* 移除欄位間距 */
+    }
+
+    /* 讓 form-group 在小螢幕下寬度填滿 */
+    .form-group {
+        width: 100%;
+    }
+
+    /* 5. 區塊標題分隔線調整 */
+    .section-line {
+        width: 100%; /* 讓分隔線佔滿寬度 */
+        margin: 30px 0; /* 調整上下間距 */
+        justify-content: center; /* 讓內容置中 */
+    }
+    
+    /* 取消標題左邊的線段 */
+    .section-line::before {
+        display: none;
+    }
+
+    /* 讓標題後的線段更短 */
+    .section-line::after {
+        margin-right: 0;
+    }
+
+    .section-title {
+        width: auto; /* 讓標題寬度根據內容決定 */
+        padding: 0 10px; /* 增加左右內邊距，與線段保持距離 */
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* 6. 注意事項框調整 */
+    .notice-box {
+        padding: 15px; /* 減少內邊距 */
+        line-height: 1.6;
+    }
+
+    /* 7. 表單元素字體調整 */
+    input,
+    select,
+    textarea,
+    label {
+        font-size: 14px; /* 增加表單輸入框和標籤的字體大小，提高手機可讀性 */
+    }
+}
+
+/* 當螢幕寬度小於或等於 480px 時 (針對更小的手機螢幕) 
+
+@media (max-width: 480px) {
+    /* 進一步縮小步驟之間的間距 
+    .booking-steps {
+        gap: 5%;
+        margin-top: 10px;
+    }
+    
+    /* 調整步驟圖標和文字的間距 
+    .booking-steps img {
+        margin-bottom: 2px;
+    }
+
+    /* 調整送出按鈕大小 
+    .submit-btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    /* 確保所有輸入元素在極小螢幕上寬度填滿 
+    input, select, textarea {
+        width: 100%;
+    }
+
+    .body-container {
+        width: 90%;
+    }
+}

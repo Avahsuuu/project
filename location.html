@@ -5,123 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>location</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/location.css">
 
-    <style>
-
-        
-
-        /* banner */
-        .banner-img img{
-            /* margin-top: 3%; */
-            width: 100%;
-        }
-
-
-        .location-info-container {
-            width: 70%;
-            max-width: 1200px;
-            /* margin: -100px auto 50px auto; */
-            /* 負邊距向上移動，覆蓋 banner */
-            margin: auto;
-            padding: 40px;
-            background-color: #fcfcfc;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .txt-img {
-            width: 80%;
-        }
-
-        .info-traffic {
-            margin-left: 30%;
-            display: flex;
-            font-size: 12px;
-            /* width: 800px; */
-            line-height: 28px;
-        }
-
-        .shop-img img{
-            height: 180px;
-            margin-right: 40px;
-            /* margin-right: 0; */
-        }
-
-        .traffic-txt {
-            /* width: 100%; */
-            width: 320px;
-        }
-
-        .near-img img {
-            margin-top: 30px;
-            height: 130px;
-            margin-left: 530px;
-        }
-
-        .contact-textcontent {
-            width: 320px;
-            margin-left: 240px;
-            margin-top: -140px;
-        }
-
-        .contact-textcontent h4{
-            font-size: 18px;
-            font-family: "Noto Serif TC", serif;
-            margin-bottom: 15px;
-        }
-
-        .contact-textcontent p{
-            font-size: 12px;
-            line-height: 25px;
-        }
-
-        .highlight {
-            padding: 5px;
-            font-size: 10px;
-            text-align: center;
-            margin-top: 25px;
-            margin-left: 240px;
-            width: 180px;
-            background-color: #F7F7CE;
-            border-radius: 20px;
-            
-            /* box-shadow: 4px 4px 10px rgba(41, 41, 41, 0.3); */
-        }
-
-
-        .title-content .txt-img img{
-            width: 25%; 
-            height: auto;
-        }
-
-        .title-content h3 {
-            width: 80px;
-            background-color: #f0f0f0;
-            color: #ca8faa; /* 模擬圖片中的紅色高亮 */
-            border-left: 3px solid #230707;
-            font-weight: bold;
-            font-family: "Noto Serif TC", serif;
-            margin-top: 17px;
-            font-size: 14px;
-            position: relative;
-            padding-left: 5px;
-            margin-left: 23px;
-        }
-
-
-
-
-        /* map */
-        .map iframe{
-            width: 100%;
-            height: 300px;
-        }
-    </style>
     
 
     
@@ -138,7 +26,16 @@
                 </a>
             </div>
     
+            <label for="menu-switch" class="hb-toggle">
+                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                <input type="checkbox" id="menu-switch" class="menu-switch">
+            </label>
+    
+    
             <nav class="header-nav">
+    
+    
+    
                 <ul class="header-list">
                     <li class="header-item"><a href="about.html">關於我們</a></li>
                     <li class="header-item"><a href="booking.html">預約表單</a></li>
@@ -147,6 +44,7 @@
                     <li class="header-item"><a href="faq.html">常見問題</a></li>
                     <li class="header-item"><a href="location.html">門市資訊</a></li>
                 </ul>
+    
             </nav>
         </div>
     </header>
@@ -154,53 +52,64 @@
     <!-- banner -->
     <div class="banner">
         <div class="banner-img">
-            <img src="pic.other/banner-img.png" alt="">
+            <img src="pic.other/banner-img-location.png" alt="">
         </div>
     </div>
 
-    <!-- location-info -->
-    <div class="location-info-container">
+    
 
-        <div class="title-content">
+    <main>
+    <!-- location-info -->
+    <!-- <div class="location-info-container"> -->
+    
+
+        <!-- <div class="title-content">
             <div class="txt-img">
                 <img src="pic.other/Location-img.png" alt="">
             </div>
             <h3>店鋪資訊</h3>
-        </div>
-
+        </div> -->
+        
         <div class="info-traffic">
+        <h1>店鋪資訊</h1>
             <div class="shop-img">
                 <img src="pic.other/shop-img.png" alt="">
             </div>
-            <div class="traffic-txt">
-            <p>Harumi 和服店坐擁京都東山區的黃金地理位置
-            換裝後即可展開最經典的和服漫步路線
-            鄰近眾多觀光勝地
-            如世界遺產清水寺、充滿古韻的二年坂/三年坂
-            以及 IG 人氣打卡點八坂庚申堂等，步行即可輕鬆前往！
-            距離公車 「清水道」 站或 「五条坂」 站僅需 5 分鐘步行路程</p>
+
+        <div class="contact-textcontent">
+            <h4>Harumi 和服店 (京都總店)</h4>
+            <p>地 址 : 〒605-0862<br>
+                京都府京都市東山區清水四丁目 182-1<br>
+                電 話 : 81 75-987-6543</p>
         </div>
+        <div class="highlight">
+            <p>🕘 最晚歸還時間：18:30 前</p>
+        </div>
+
         </div>
 
         <div class="info-contact">
+            <div class="traffic-txt">
+                <p>Harumi 和服店坐擁京都東山區的黃金地理位置<br>
+                    換裝後即可展開最經典的和服漫步路線<br>
+                    鄰近眾多觀光勝地<br>
+                    如世界遺產清水寺、充滿古韻的二年坂/三年坂<br>
+                    以及 IG 人氣打卡點八坂庚申堂等，步行即可輕鬆前往！<br>
+                    距離公車 「清水道」 站或 「五条坂」 站僅需 5 分鐘步行路程
+                </p>
+            </div>
             <div class="near-img">
                 <img src="pic.other/near-img.png" alt="">
             </div>
-            <div class="contact-textcontent">
-                <h4>Harumi 和服店 (京都總店)</h4>
-                <p>地 址 : 〒605-0862<br>
-                京都府京都市東山區清水四丁目 182-1<br>
-                電 話 : 81 75-987-6543</p>
-            </div>
-            <div class="highlight">
-                <p>🕘 最晚歸還時間：18:30 前</p>
-            </div>
+            
+            
+
         </div>
         
 
         
 
-    </div>
+    </main>
 
     <div class="map">
         <iframe
@@ -224,7 +133,7 @@
                         電話（台灣聯絡):0912-345-678<br>
                         預約信箱:blooming.florist@gmail.com
                     </address>
-                    <div>服務時間：週一至週六 10:00-18:00(京都當地時間</div>
+                    <div>服務時間：週一至週六 10:00-18:00 (京都當地時間)</div>
                 </div>
             </div>
     
@@ -232,6 +141,7 @@
                 <img src="pic.other/line-icon.png" alt="Line">
                 <img src="pic.other/facebook-icon.png" alt="Facebook">
                 <img src="pic.other/instagram-icon.png" alt="Instagram">
+                
             </div>
         </div>
     </footer>

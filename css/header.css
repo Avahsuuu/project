@@ -1,0 +1,162 @@
+/* ====== 基本 Header ====== */
+header {
+    width: 100%;
+    background: #E9E1E1;
+    padding: 15px 40px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    /* opacity: 0.9; */
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* ====== Desktop Nav ====== */
+.header-nav {
+    display: flex;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: 5%;
+}
+
+.header-item a {
+    font-size: 14px;
+    color: #545052;
+    display: block;
+    width: 100px;
+    text-align: center;
+    height: 22px;
+}
+
+.header-item:hover a {
+    background-color: #ccbcbe;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+
+/* ====== 手機版 ====== */
+@media screen and (max-width: 991px) {
+
+    .header-container {
+    justify-content: space-between;
+    }
+
+    .hb-toggle img {
+        width: 30px;
+        cursor: pointer;
+        z-index: 300;
+        position: relative;
+    }
+
+    .menu-switch {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        z-index: 250;
+        cursor: pointer;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        background-color: #E8E1E1;
+        width: 100%;
+        height: calc(100svh - 60px);
+        transition: left .3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+    }
+
+    .header-list {
+        flex-direction: column;
+        gap: 40px;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    .info-contact {
+    background-color: #ECEDEF;
+    border-radius: 10px;
+    /* padding: 20px; */
+    }
+
+
+    main {
+    background-color: transparent;
+    }
+    /* checkbox checked → nav 打開 */
+    .header-container:has(#menu-switch:checked) .header-nav {
+        left: 0;
+    }
+
+
+    
+}
+
+/* ====== 桌機版：隱藏漢堡 ====== */
+@media screen and (min-width: 991px) {
+    .hb-toggle,
+    #menu-switch {
+        display: none;
+    }
+}
+
+
+ /* <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="pic.index/logo.png" alt="">
+                </a>
+            </div>
+    
+            <!-- Hidden checkbox -->
+            <input type="checkbox" id="menu-switch" class="menu-switch">
+    
+            <!-- Hamburger icon -->
+            <label for="menu-switch" class="hb-toggle">
+                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+            </label>
+    
+            <!-- Nav -->
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="about.html">關於我們</a></li>
+                    <li class="header-item"><a href="booking.html">預約表單</a></li>
+                    <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
+                    <li class="header-item"><a href="news.html">最新消息</a></li>
+                    <li class="header-item"><a href="faq.html">常見問題</a></li>
+                    <li class="header-item"><a href="location.html">門市資訊</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> */
