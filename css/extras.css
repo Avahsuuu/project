@@ -35,6 +35,8 @@ header {
             color: #514E4E;
         }
 
+        
+
         main {
             position: relative;
             width: 70%;
@@ -125,7 +127,7 @@ header {
         .accessory-intro h3 {
             font-family: Noto Serif TC;
             margin-bottom: 25px; 
-            margin-left: 15%;
+            /* margin-left: 15%; */
             /* text-align: center; */
             display: flex;
             align-items: center;
@@ -206,7 +208,7 @@ header {
         .photo-intro h3 {
             font-family: Noto Serif TC;
             margin-bottom: 25px; 
-            margin-left: 10%;
+            /* margin-left: 10%; */
             text-align: center;
             display: flex;
             align-items: center;
@@ -405,7 +407,7 @@ header {
     
     
     
-
+ 
     /* 內容區塊調整：移除桌機版上的 '跳過' 樣式 */
     .accessory-intro,
     .photo-intro {

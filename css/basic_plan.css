@@ -1,3 +1,7 @@
+
+    *{
+        /* border: 2px solid red; */
+    }
 header {
             z-index: 20;
         }
@@ -106,36 +110,44 @@ header {
         /* plan */
 
         .basic-intro {
-            /* border: 1px solid black; */
             margin-left: 30%;
             width: 65%;
             margin-bottom:50px;
+            position: relative;
         }
 
         .plan-list {
             display: flex;
             gap: 20px; 
-            
+        }
+        .basic-intro .intro-wrap {
+            display: inline-block;
+            margin: 0 auto;           /* 置中 */
+        }
+
+        .intro-wrap {
+            /* border: 2px solid red; */
             
         }
 
-        .plan-card {
-            /* border: 1px solid rgb(240, 9, 9); */
-            
+        .intro-title {
+            /* border: 2px solid blue; */
+            width: 100%; 
+            text-align: center;
+
         }
+
         .basic-intro h3 {
             font-family: Noto Serif TC;
             margin-bottom: 25px; 
-            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 7%;
-
+            justify-content: center;
+            align-items: center;
+            left: auto;
+            width: 100%;
         }
-
-
-
         
         .basic-intro h3::before {
             content: "";
@@ -144,7 +156,6 @@ header {
             background-color: #a0a0a0; 
             margin-right: 20px; 
             max-width: 200px; 
-
         
         }
 
@@ -162,7 +173,7 @@ header {
         .plan-cimg {
             display: flex;
             justify-content: center;
-            
+            text-align: center;
         }
         .plan-cimg img{
             width: 190px;
@@ -173,6 +184,7 @@ header {
 
         .plan-img {
             gap: 5px;
+            text-align: center;
         }
         .plan-img img{
             width: 190px;

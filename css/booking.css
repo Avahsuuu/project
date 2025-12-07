@@ -208,17 +208,16 @@
         object-position: left top;
     }
     
-    /* 1. 全局容器調整 */
+
     .body-container {
-        width: 90%; /* 讓容器佔滿大部分螢幕寬度 */
-        padding: 20px; /* 減少內邊距 */
-        box-shadow: none; /* 在小螢幕上移除陰影，讓視覺更簡潔 */
+        width: 100% !important;
+        padding: 0 !important;         
     }
 
     /* 2. 表單容器調整 */
     .reservation-wrapper {
         max-width: none; /* 取消最大寬度限制 */
-        padding: 0; /* 移除容器內邊距，利用 body-container 的 padding */
+        padding: 20; /* 移除容器內邊距，利用 body-container 的 padding */
     }
 
     /* 3. 預約步驟調整 */

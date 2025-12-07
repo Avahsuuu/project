@@ -1,3 +1,5 @@
+
+
 .banner {
     width: 100%;
     height: auto; /* 桌面版高度 */
@@ -146,15 +148,15 @@ h2 {
 
 .arrow-icon-1 img {
     margin-top: 100px;
-    background-color: #ca8d9b;
+    /* background-color: #fafafa; */
     border-radius: 80px;
     width: 35px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
 }
 
 .arrow-icon-2 img {
     margin-top: 100px;
-    background-color: #ca8d9b;
+    /* background-color: #ca8d9b; */
     border-radius: 80px;
     width: 35px;
     opacity: 0.7;
@@ -252,6 +254,7 @@ h2{
 }
 
 .product-list {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -260,12 +263,16 @@ h2{
 }
 
 .product-item {
-    width: 300px;
+    /* width: 40%; */
     padding: 0;
     position: relative;
 
     /* opacity: 0; 初始隱藏 */
      /* animation: fadeSlideUp 0.8s ease-out forwards; */
+
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
+
+
 }
 
 .product-item:hover {
@@ -279,14 +286,15 @@ h2{
     border-radius: 10px;
     /* height: 320px; */
     position: relative;
+    display: block;
     
 }
 
 .product-img img {
     line-height: 0;
     width: 100%;
-    /*height: 120%; */
-    border-radius: 10px;
+    height: 120%;
+    /* border-radius: 10px; */
     object-fit: cover;
     overflow: hidden;
 }
@@ -368,14 +376,17 @@ h2{
 }
 
     .product-list {
-        width: 100%;
+        width: 90%;
         margin: auto;
     }
     .product-img {
-        width: 330px;
+        /* width: 330px; */
+        /* border: 1px solid blue; */
+
     }
 
 
+    
     .product-item {
         position: relative;
         margin-right: 30px;
@@ -402,24 +413,36 @@ h2{
         100%,calc(100% - var(--f)) var(--f),100% var(--f));
     }
 
-    .product-txt {
-        margin-left: 3.8%;
-        margin-bottom: -1%;
-        background-color: #E5DA78;
-        background: rgba(229, 218, 120, 0.6);
-        width: 106%;
-        font-size: 16px;
-        margin-top: 10px;
-        padding: 10px 15px;
-        position: absolute;
-        bottom: 10px;
-        left: -10px;
-        line-height: 25px;
-        color: #504F4F;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
 
+    .product-item {
+        position: relative;
     }
+
+    .product-img {
+        position: relative; /* 讓文字能絕對定位於圖片上 */
+    }
+
+    .product-img img {
+        width: 100%;
+        display: block;
+    }
+
+    .producttxt {
+        position: absolute;
+        top: 72%; /* 文字靠圖片底部 */
+        left: 0;
+        width: 100%;
+        max-height: 27%; /* 限制文字最大高度為圖片高度的30% */
+
+        color: #504F4F;
+        
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden; /* 超出部分隱藏 */
+    }
+
+
+
     
     .product-label-2 {
         font-family: Noto Serif TC;
@@ -443,24 +466,6 @@ h2{
         100%,calc(100% - var(--f)) var(--f),100% var(--f));
     }
 
-    .product-txt-2 {
-        margin-left: 3.8%;
-        margin-bottom: -0.1%;
-        background-color: #C4CEBF;
-        background: rgba(196, 206, 191, 0.7);
-        width: 106.3%;
-        font-size: 16px;
-        margin-top: 10%;
-        padding: 10px 15px;
-        position: absolute;
-        bottom: 10px;
-        left: -10px;
-        line-height: 25px;
-        color: #504F4F;
-        border-bottom-right-radius: 16px;
-        border-bottom-left-radius: 16px;
-
-    }
     
 
     .product-label-3 {
@@ -485,24 +490,6 @@ h2{
         100%,calc(100% - var(--f)) var(--f),100% var(--f));
     }
 
-    .product-txt-3 {
-        margin-left: 3.8%;
-        margin-bottom: -0.3%;
-        background-color: #C28F90;
-        background: rgba(191, 143, 144, 0.8);
-        width: 106%;
-        font-size: 16px;
-        margin-top: 10%;
-        padding: 10px 15px;
-        position: absolute;
-        bottom: 10px;
-        left: -10px;
-        line-height: 25px;
-        color: #504F4F;
-        border-bottom-right-radius: 18px;
-        border-bottom-left-radius: 18px;
-
-    }
 
 
     
@@ -617,13 +604,10 @@ h2{
 
 
 .intro-txtcontent {
+    width: 100%;
     margin-top: 20px;
     text-align: center;
     color: #504F4F;
-
-    opacity: 0;
-    animation: fadeSlideUp 1s ease-out forwards;
-    animation-delay: .5s;
 }
 
 
@@ -637,18 +621,16 @@ h2{
 }
 
 .mark1 {
-    margin-left: -550px;
+    margin-left: -55%;
     transform: scaleX(-1);
     font-size: 30px;
 }
 
 .mark2 {
-    margin-right: -550px;
-    margin-left: 0px;
-
+    margin-left: 55%;
     transform: scaleY(-1);
     font-size: 30px;
-    margin-top: -30px;
+    margin-top: -2%;
 
 }
 
@@ -666,7 +648,7 @@ h2{
     }
     .banner {
         width: 100%;
-        height: 300px; /* 桌面版高度 */
+        height: 300px; 
         overflow: hidden; 
     }
 
@@ -675,8 +657,7 @@ h2{
         height: 100%; 
         object-fit: cover; 
         margin-top: 0px;
-        /* object-position: 40% 50%;  */
-        /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+
     }
 
     .intro-txt {
@@ -686,18 +667,25 @@ h2{
 
     }
 
-    .mark1 {
-        margin-left: -350px;
+    .producttxt {
+        font-size: 14px;
     }
 
+    .mark1 {
+    margin-left: -70%;
+}
+
     .mark2 {
-        margin-right: 0px;
-        margin-left: 340px;
+        margin-left: 70%;
+        margin-top: -2%;
+
     }
 
     .product-list {
+        /* width: 100%; */
         flex-wrap: wrap;
-        
+        margin: auto;
+        margin-right: 0px;
     }
 
     .featured-product h2, .reviews h2{
