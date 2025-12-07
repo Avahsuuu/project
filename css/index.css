@@ -226,10 +226,6 @@ h2 {
         }
     }
 
-    /* (可選) 增加滑鼠懸停暫停功能
-    .carousel-container:hover .review-img-list {
-        animation-play-state: paused;
-    } */
 
 
     @keyframes fadeSlideUp {
@@ -267,16 +263,8 @@ h2{
 }
 
 .product-item {
-    /* width: 40%; */
     padding: 0;
     position: relative;
-
-    /* opacity: 0; 初始隱藏 */
-     /* animation: fadeSlideUp 0.8s ease-out forwards; */
-
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
-
-
 }
 
 .product-item:hover {
@@ -444,7 +432,6 @@ h2{
     }
 
 
-
     
     .product-label-2 {
         font-family: Noto Serif TC;
@@ -467,8 +454,6 @@ h2{
         clip-path: polygon(calc(100% - var(--f)) 0,0 0,0 100%,calc(50% - var(--f)/2) calc(100% - var(--r)),calc(100% - var(--f))
         100%,calc(100% - var(--f)) var(--f),100% var(--f));
     }
-
-    
 
     .product-label-3 {
         font-family: Noto Serif TC;

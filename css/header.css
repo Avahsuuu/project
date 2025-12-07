@@ -60,9 +60,6 @@ main {
 /* ====== 手機版 ====== */
 @media screen and (max-width: 991px) {
 
-    * {
-        /* border: 1px solid red; */
-    }
 
 
     .header-container {
@@ -151,33 +148,3 @@ main {
 }
 
 
- /* <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="pic.index/logo.png" alt="">
-                </a>
-            </div>
-    
-            <!-- Hidden checkbox -->
-            <input type="checkbox" id="menu-switch" class="menu-switch">
-    
-            <!-- Hamburger icon -->
-            <label for="menu-switch" class="hb-toggle">
-                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
-            </label>
-    
-            <!-- Nav -->
-            <nav class="header-nav">
-                <ul class="header-list">
-                    <li class="header-item"><a href="about.html">關於我們</a></li>
-                    <li class="header-item"><a href="booking.html">預約表單</a></li>
-                    <li class="header-item"><a href="basic_plan.html">方案介紹</a></li>
-                    <li class="header-item"><a href="news.html">最新消息</a></li>
-                    <li class="header-item"><a href="faq.html">常見問題</a></li>
-                    <li class="header-item"><a href="location.html">門市資訊</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> */

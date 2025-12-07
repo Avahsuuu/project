@@ -7,10 +7,7 @@
         body {
             font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
             background-image: url("../pic.other/repeat-bg.png");
-            
-            /* background-size: cover; */
             background-position: center;
-            /* background-repeat: no-repeat; */
             background-size: 150px 150px;
             background-repeat: repeat;
             color: #333;
@@ -20,24 +17,20 @@
 
             display: flex;
             flex-direction: column; 
-            min-height: 100vh; /* 至少佔滿一個視口高度 */
+            min-height: 100vh;
         }
 
         
 
         body::before {
             content: ""; 
-            position: fixed; /* 讓遮罩固定在整個視窗 */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            
-            /* 設定半透明白色遮罩 */
-            /* RGBA(255, 255, 255, 0.8) = 白色，80% 不透明度 (背景圖會露出 20%) */
             background-color: rgba(255, 255, 255, 0.5); 
-            
-            z-index: -1; /* 將遮罩放在 body 內容的下方 */
+            z-index: -1; 
             }
 
         a {

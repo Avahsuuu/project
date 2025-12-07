@@ -41,12 +41,8 @@ header {
         main {
             position: relative;
             width: 70%;
-            /* max-width: 1200px; */
             height: auto;
             margin: auto;
-            /* padding: 40px; */
-            /* background-color: #fcfcfc;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
             background-color: transparent;
             border-radius: 5px;
             position: relative;
@@ -56,7 +52,6 @@ header {
         
         .plans-content-wrapper {
             display: flex;
-            /* gap: 10%; */
         }
 
         .plans-detail-sections {
@@ -200,7 +195,6 @@ header {
         /* photo */
 
         .photo-intro {
-            /* border: 1px solid black; */
             margin-left: 30%;
             width: 65%;
             margin-bottom:50px;
@@ -285,10 +279,8 @@ header {
         .plan-icon {
             display: flex;
             justify-content: center;
-            /* border: 1px solid #333; */
             width: 200px;
             height: auto;
-            /* margin-left: -5px; */
         }
 
         .plan-icon img {
@@ -296,7 +288,6 @@ header {
         }
 
         .photo-card {
-            /* display: flex; */
             width: 65%;
             gap: 20px; 
             
@@ -341,19 +332,17 @@ header {
             width: 100%;
             height: 100%; 
             object-fit: cover; 
-            object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+            object-position: 100% 50%; 
 
         }
 
 
-        /* extras.css (桌面版/預設樣式) */
-
+        
         .accessory-card {
             /* 讓每個卡片平均佔據剩餘空間，並且在縮小時可以收縮 */
             /* flex-basis: 0; 代表沒有初始大小，完全依賴比例 */
             /* flex-grow: 1; 代表它們會平均瓜分空間 */
             flex: 1 1 0; 
-            /* 或者更簡單地： flex: 1; */
         }
 
         .accessory-img img{
@@ -373,39 +362,30 @@ header {
 
 
         .photo-card {
-            /* 讓每個卡片平均佔據剩餘空間，並且在縮小時可以收縮 */
-            /* flex-basis: 0; 代表沒有初始大小，完全依賴比例 */
-            /* flex-grow: 1; 代表它們會平均瓜分空間 */
             flex: 1 1 0; 
-            /* 或者更簡單地： flex: 1; */
+            
         }
 
         .plan-icon img{
-            /* 保持圖片最大寬度為 190px，但允許它縮小 */
-            /* max-width: 190px;  */
-            /* 關鍵步驟：確保圖片不會溢出其父容器 (.accessory-img) */
             width: 30%; 
             height: 30%;
         }
 
-        /* 確保 .accessory-img (圖片的父層) 能夠在卡片內縮放 */
         .photo-card .plan-icon {
-            /* 讓圖片容器佔據卡片內部的固定比例，或設定一個最大值 */
-            max-width: 190px; /* 限制容器的寬度 */
-            margin: 0 auto; /* 置中 */
+            max-width: 190px; 
+            margin: 0 auto; 
         }
 
         
 
-        /* ==============================
-    圖片 hover 放大效果 (前六張)
-    ============================== */
+        
+    /* 圖片 hover 放大效果  */
 
     /* 限制父層容器 overflow，防止溢出 */
     .accessory-img, .photo-card  {
         overflow: hidden;
         display: inline-block; /* 讓 transform 效果限制在容器內 */
-        border-radius: 5px; /* 可選：增加圓角 */
+        border-radius: 5px; 
     }
 
     /* 圖片本身過渡效果 */
@@ -430,10 +410,7 @@ header {
 
 
         
-/* ============================
-   RWD — Mobile (max-width: 768px)
-   只調整手機版，不變動原本的桌機版結構
-   ============================ */
+
 @media (max-width: 768px) {
 
     .plans-detail-sections {
@@ -483,8 +460,6 @@ header {
     .plans-content-wrapper {
         flex-direction: column; 
         gap: 20px;
-        /* 由於您的 HTML 中沒有為 plans-content-wrapper 設置 display: flex，
-           這一步可能不生效，但我們嘗試修正後面的子元素佈局。 */
     }
 
     /* 左側導航調整：置頂並橫向分散 */
@@ -494,9 +469,6 @@ header {
         padding-top: 20px;
     }
 
-    .plans-sub-nav h2 {
-        
-    }
     
     .plans-sub-nav ul {
         margin: 10px 0 0 0;
@@ -507,14 +479,9 @@ header {
         list-style: none;
     }
     
-    
-    
-
-    /* 內容區塊調整：移除桌機版上的 '跳過' 樣式 */
     .accessory-intro,
     .photo-intro {
-        /* margin-top: 50px; */
-        /* text-align: center; */
+        
         margin-left: 0; /* 關鍵：移除桌機版上為了避開左側導航而設置的邊距 */
         width: 100%; /* 佔滿剩餘寬度 */
         margin-bottom: 30px;

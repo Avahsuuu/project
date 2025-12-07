@@ -122,10 +122,7 @@
         .kimono-img-group {
             width: 40%;
             display: flex; 
-            /* align-items: end; */
             flex-shrink: 0;
-            /* margin-bottom: 50px; */
-            /* padding: 20px 0; */
             border-bottom: 1px solid #eee;
             margin-bottom: 0; 
             padding: 0;
@@ -135,12 +132,6 @@
             width: 200px;
         }
 
-        /* .kimono-img-group .kimono-simg img {
-            display: flex;
-            margin-top: 5px;
-            width: 30px;
-            margin: 3px;
-        } */
 
         .kimono-simg img{
             display: flex;
@@ -164,7 +155,6 @@
         }
 
         .kimono-img.main-kimono-img {
-            /* border: 2px solid red; */
             height: 300px;
         }
         /* butt */
@@ -175,9 +165,8 @@
             margin-top: 10px;
         }
 
-        /* Font Awesome 圖示 */
+        
         .butt .fa-solid {
-            /* color: var(--accent-color); */
             font-size: 30px;
         }
 
@@ -198,7 +187,6 @@
         .bookingnow-btn {
             background-color: #F7F7CE;
             color: #5D5959;
-            /* border-color: var(--accent-color); */
         }
 
         .bookingnow-btn:hover {
@@ -298,11 +286,7 @@
         object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
     }
 
-        /* ... 導航按鈕和指示器的樣式 (略) ... */
-
-/* ============================
-   RWD — Mobile (max-width: 768px)
-   ============================ */
+        
 @media (max-width: 768px) {
 
     .banner-img {

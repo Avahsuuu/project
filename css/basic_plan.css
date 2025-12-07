@@ -180,8 +180,6 @@ header {
             width: 190px;
             height: auto;
             margin-top: 0%;
-
-            /* margin: auto; */
         }
 
 
@@ -208,14 +206,12 @@ header {
 
 
         .plan-textcontent .txt {
-            
             width: 100%
             font-family:Noto Sans TC;
             margin-top: 15px;
             line-height: 25px;
             font-size: 14px;
             color: #545052;
-            /* margin-left: 10px; */
         }
 
         .plan-textcontent .price {
@@ -229,7 +225,6 @@ header {
             border-radius: 15px;
             opacity: 0.8;
             padding: 5px;
-            /* box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1); */
         }
 
         .banner-img {
@@ -242,21 +237,16 @@ header {
             width: 100%;
             height: 100%; 
             object-fit: cover; 
-            object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+            object-position: 100% 50%; 
         }
 
 
 
-
-
-        /* ============================
-RWD — Mobile (max-width: 768px)
-   ============================ */
 @media (max-width: 768px) {
 
     .banner-img {
         width: 100%;
-        height: 250px; /* 桌面版高度 */
+        height: 250px; 
         overflow: hidden; 
     }
 
@@ -264,10 +254,10 @@ RWD — Mobile (max-width: 768px)
         width: 100%;
         height: 100%; 
         object-fit: cover; 
-        object-position: 30% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+        object-position: 30% 50%; 
     }
 
-    /* Banner slogan 調整位置＋置中 */
+    
     .slogan-line1,
     .slogan-line2 {
         left: 50%;
@@ -287,15 +277,13 @@ RWD — Mobile (max-width: 768px)
         white-space: nowrap;
     }
 
-    /* main 寬度縮小 */
     main {
         width: 92%;
-        /* margin-top: 20px; */
     }
 
     /* 上下排列 */
     .plans-content-wrapper {
-        flex-direction: column; /* 側邊欄和內容上下堆疊 */
+        flex-direction: column;
     }
 
     main {
@@ -303,12 +291,10 @@ RWD — Mobile (max-width: 768px)
         width:90%;
     }
 
-    /* 結構調整：強制左側導航和右側內容垂直堆疊 */
+
     .plans-content-wrapper {
         flex-direction: column; 
         gap: 20px;
-        /* 由於您的 HTML 中沒有為 plans-content-wrapper 設置 display: flex，
-           這一步可能不生效，但我們嘗試修正後面的子元素佈局。 */
     }
 
     /* 左側導航調整：置頂並橫向分散 */
@@ -318,15 +304,12 @@ RWD — Mobile (max-width: 768px)
         padding-top: 20px;
     }
 
-    .plans-sub-nav h2 {
-        
-    }
     
     .plans-sub-nav ul {
         margin: 10px 0 0 0;
         margin-left: 10%;
-        display: flex; /* 讓導航項目水平排列 */
-        justify-content: space-around; /* 平均分散空間 */
+        display: flex; 
+        justify-content: space-around;
         
         list-style: none;
     }
@@ -338,11 +321,8 @@ RWD — Mobile (max-width: 768px)
         padding: 0 10px;
     }
     
-    /* -----------------------
-    plan-card：手機左右排列
-    ----------------------- */
     .plan-list {
-        flex-direction: column; /* 卡片列表本身還是垂直堆疊 */
+        flex-direction: column; 
         gap: 25px;
     }
     
@@ -354,7 +334,6 @@ RWD — Mobile (max-width: 768px)
         margin-top: 5%;
     }
     .plan-card {
-        ;
         display: flex ; 
         flex-direction: row ;   /* 卡片內容改為左右排列 */
         align-items: flex-start; /* 圖片和文字從頂部對齊 */
@@ -407,7 +386,7 @@ RWD — Mobile (max-width: 768px)
     
     .txt-bg {
         padding: 10px;
-        margin-top: 0; /* 移除多餘間距 */
+        margin-top: 0; 
     }
 
     

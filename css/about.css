@@ -2,71 +2,41 @@ main {
     padding-top: 100px; 
     width: 100%;
     margin: 0 auto;
-    /* 移除 min-height: 1200px; */ 
     background-color: transparent;
-    /* height: 1600px; */
-    /* border: 10px solid blue; */
 
 }
-
-
-
-
-* {
-    /* border: 1px solid red; */
-}
-
 .about-wapper{
-    /* border: 3px solid blue; */
     width: 100%;
     margin-top: 0px;
 
 }
 
 /* about */
-.about-info {
-    
-    
-}
 .about-info h1 {
     font-size: 24px;
     letter-spacing: 5px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 20px;
-    /* margin-left: 500px; */
     font-family: "Noto Serif TC", serif; 
 }
 .about-info-txt {
-    /* width: 50%; */
-    /* max-width: 700px; */
     margin: 20px auto 50px auto; 
     color: #5D5959;
     line-height: 1.8;
     font-size: 16px;
-    /* margin-left: 500px; */
 }
 
 /* block1 */
-
-.block-1-img img{
-    /* width: 60%; */
-}
-
 .block-1-txt {
     width: 80%;
-    /* margin-left: 13%; */
     color: #5D5959;
     line-height: 1.8;
     font-size: 16px;
     margin-left: 20%;
 }
-
 .txtgroup1 {
-    /* padding: 0; */
     width: 55%;
-    
-    
 }
 .feature-block-1 h3 {
     width: 80%;
@@ -80,7 +50,6 @@ main {
 }
 
 
-
 /* block2 */
 .feature-block-2 {
     margin-left: 60%;
@@ -89,7 +58,6 @@ main {
 .block-2-img img{
     width: 100%;
 }
-
 .block-2-txt {
     width:100%;
     color: #5D5959;
@@ -97,7 +65,6 @@ main {
     font-size: 16px;
     /* margin-left: 27%; */
 }
-
 .feature-block-2 h3 {
     margin-left: 27%;
     font-family: "Noto Serif TC", serif; 
@@ -106,31 +73,13 @@ main {
     font-size: 18px;
 }
 
-/* block3 (大螢幕/預設 - 保持重疊效果) */
+
 main {
-    position: relative; /* 確保絕對定位的圖片以 main 為基準 */
+    position: relative;
 }
 
-.block-3-1-img img {
-    /* position: absolute; */
-    /* margin-top: 40%;
-    margin-left: 5%;
-    width: 250px; */
-}
-.block-3-2-img img {
-    /* position: absolute; */
-    /* margin-top: 30%;
-    margin-left: 2%;
-    width: 250px;
-    left: 35%; */
-}
-.block-3-3-img img {
-    /* position: absolute; */
-    /* margin-top: 30%;
-    margin-left: 5%;
-    width: 250px;
-    left: 8%; */
-}
+
+
 
 @media screen and (min-width: 375px) {
     main {
@@ -151,71 +100,32 @@ main {
     }
 
     .about-info-txt {
-        /* margin-left: 20%; */
-        /* background-color: blue; */
         padding: 35px;
         text-align: left;
-        
         line-height: 1.6;
-
-         /* width: 50%; */
-        
     }
 
     .block-1-img img{
         width: 100%;
         margin-top: -40px;
-        
     }
-
-    .block-1-txt {
-        
-        /* width: 80%; */
-        /* margin-left: 10%; */
-    }
-
-    .feature-block-1 h3 {
-        /* width: 100%; */
-        /* margin-left: 20%; */
-    } 
 
     .feature-block-2 {
         margin-left: 0%;
         margin-top: 5%;
         text-align: center
     }
-    .block-2-img img{
-        /* margin-top: 20px; */
-        /* width: 100%; */
-    }
 
     .block-2-txt {
         text-align: left;
         margin: auto;
         width: 90%;
-        /* width:80%; */
-        /* margin-left: 10%; */
     }
 
     .feature-block-2 h3 {
         margin-left: 0%;
         
     } 
-    /* .block-3-1-img img {
-    top: 73%;
-    left: 50%;
-    width: 200px;
-    }
-    .block-3-2-img img {
-        top: 88%;
-        width: 200px;
-        left: 58%;
-    }
-    .block-3-3-img img {
-        top: 82%;
-        width: 200px;
-        left: 5%;
-    } */
 }
 
 
@@ -276,7 +186,7 @@ main {
     
     }
 
-    /* Block 3 絕對定位 (大螢幕重疊) */
+    /* Block 3 */
 
     .block-3-1-img {
         width: 40%;

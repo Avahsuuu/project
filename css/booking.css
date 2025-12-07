@@ -1,326 +1,250 @@
-/* ==== form container ==== */
-            .reservation-wrapper {
-                max-width: 600px;
-                padding: 20px 40px;
-                font-family: "Noto Serif TC", serif; 
-            }
-    
-            /* ==== background ==== */
-        
 
-            
-            .body-container {
-                display: flex;
-                justify-content: center; /* 讓子元素在主軸（水平）上置中 */
-                align-items: flex-start; /* 讓子元素在交叉軸（垂直）上靠上對齊，保持預設流動 */
-            }
+                .reservation-wrapper {
+                    max-width: 600px;
+                    padding: 20px 40px;
+                    font-family: "Noto Serif TC", serif; 
+                }
 
-            .booking-steps {
-                display: flex;
-                gap: 20%;
-                margin-top: -10px;
-                margin-left: 22%;
-                font-size: 12px;
-            } 
+                .body-container {
+                    display: flex;
+                    justify-content: center; /* 讓子元素在主軸（水平）上置中 */
+                    align-items: flex-start; /* 讓子元素在交叉軸（垂直）上靠上對齊，保持預設流動 */
+                }
 
-            
-    
-            /* ==== bookNow 左側欄 ==== */
-            /* .bookNow {
-                width: 260px;
-                padding-top: 10px;
-                flex-shrink: 0;
-                text-align: left;
-            }
-    
-           
-            
+                .booking-steps {
+                    display: flex;
+                    gap: 20%;
+                    margin-top: -10px;
+                    margin-left: 22%;
+                    font-size: 12px;
+                } 
 
-            /*.bookNow a:hover {
-                border-left-color: #96A1B6;
-                跟圖片類似的灰色 
-            }*/
-    
-            /* 若要讓圖片與文字間距更接近 
-            .booknow-img img {
-                width: 200px;
-            } */
-    
-            /* ==== 頁面標題 ==== */
-            /* .page-title {
-                text-align: center;
-                font-size: 18px;
-                color: #060007;
-                margin-bottom: 40px;
-                font-weight: 700;
-                letter-spacing: 1px;
-            } */
-            
-            
-            * {
-                /* border: 1px solid red; */
-            }
 
-            /* ==== 區塊標題 ==== */
-            .section-title {
-                text-align: center;
-                width: 110px;
-                /* width: 100%; */
-                display: inline-block;
-                background-color: #575252;
-                padding: 6px 18px;
-                border-radius: 20px;
-                font-size: 16px;
-                color: white;
-                border: 1px solid #575252;
+                /* ==== 區塊標題 ==== */
+                .section-title {
+                    text-align: center;
+                    width: 110px;
+                    /* width: 100%; */
+                    display: inline-block;
+                    background-color: #575252;
+                    padding: 6px 18px;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    color: white;
+                    border: 1px solid #575252;
 
-            }
-    
-            .section-line {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                width: 600px;
-                margin: 40px 0;
-                position: relative;
+                }
+
+                .section-line {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 600px;
+                    margin: 40px 0;
+                    position: relative;
+                    
+                }
+
+                .section-line::before {
+                    content: "";
+                    width: 80px;
+                    flex: 0 0 auto;
+                    height: 0.5px;
+                    background-color: #575252;
+                }
+
+                .section-line::after {
+                    content: "";
+                    flex: 1;
+                    margin-right: 10%;
+                    height: 0.5px;
+                    background-color: #575252;
+                    
+                }
+
+                /* ==== 表單結構 ==== */
+                .form-row {
+                    display: flex;
+                    gap: 20px;
+                }
+
+                .form-group {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+                }
+
                 
-            }
-    
-            .section-line::before {
-                content: "";
-                width: 80px;
-                flex: 0 0 auto;
-                height: 0.5px;
-                background-color: #575252;
-            }
-    
-            .section-line::after {
-                content: "";
-                flex: 1;
-                margin-right: 10%;
-                height: 0.5px;
-                background-color: #575252;
-                
-            }
-    
-            /* ==== 表單結構 ==== */
-            .form-row {
-                display: flex;
-                gap: 20px;
-            }
-    
-            .form-group {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 15px;
-            }
+                label {
+                    font-weight: bold;
+                    margin-bottom: 6px;
+                    color: #4e4a4c;
+                    font-size: 16px;
+                }
 
+                /* ==== 表單欄位 ==== */
+                input,
+                select,
+                textarea {
+                    padding: 10px;
+                    border-radius: 6px;
+                    border: 1px solid #c8c8c8;
+                    font-size: 11px;
+                    background-color: #f8f8f8;
+                    box-sizing: border-box;
+                    color: #4c4c4c;
+                }
+
+                input:focus,
+                select:focus,
+                textarea:focus {
+                    outline: none;
+                    border-color: #bfa3b4;
+                    background: #fff;
+                }
+
+                /* ==== 注意事項 ==== */
+                .notice-box {
+                    margin-top: 30px;
+                    background: #fff5f6;
+                    padding: 18px 22px;
+                    border-left: 5px solid #e1b7bf;
+                    border-radius: 10px;
+                    line-height: 1.8;
+                    font-size: 12px;
+                    color: #6b6366;
+
+                    height: 150px;     /* 固定區域大小 */
+                    overflow-y: auto
+                }
+
+                .notice-box ul {
+                    padding-left: 20px;
+                    margin: 0;
+                }
+
+                /* ==== 送出按鈕 ==== */
+                .submit-btn {
+                    width: 130px;
+                    background: #d7b8c3;
+                    border: none;
+                    padding: 9px 30px;
+                    color: white;
+                    font-size: 14px;
+                    border-radius: 30px;
+                    margin: 20px auto 0;
+                    display: block;
+                    cursor: pointer;
+                    transition: 0.2s ease;
+                }
+
+                .submit-btn:hover {
+                    background: #c19aa9;
+                }
+
+
+
+
+
+        @media (max-width: 768px) {
+
+        .banner img {
+            height: 350px;
+            margin-top: 60px;
+            content: url("../pic.other/news-banner-simg.png");
+            width: 100%;
+            height: auto;
+            object-fit: cover;  /* 讓圖片像背景一樣填滿 */
+            object-position: left top;
+        }
+
+
+        .body-container {
+            width: 100% !important;
+            padding: 0 !important;         
+        }
+
+        /* 2. 表單容器調整 */
+        .reservation-wrapper {
+            max-width: none; /* 取消最大寬度限制 */
+            padding: 20; /* 移除容器內邊距，利用 body-container 的 padding */
+        }
+
+        /* 3. 預約步驟調整 */
+        .step-img {
+            /* 將步驟圖片置中 */
+            margin-left: 0 !important; /* 覆蓋內聯樣式 */
+            text-align: center;
+        }
+        .step-img img {
+            width: 65%; /* 讓圖片寬度適應小螢幕 */
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* 步驟文字排版調整 */
+        .booking-steps {
+            margin-left: 0; /* 取消左側偏移 */
+            gap: 10%; /* 減少步驟之間的間距 */
+            justify-content: center; /* 置中 */
+            margin-top: -10px;
+            font-size: 11px; /* 縮小字體 */
+        }
+
+        /* 4. 表單欄位排版調整 (關鍵 RWD 調整) */
+        .form-row {
+            flex-direction: column; /* 將水平排列的欄位改為垂直堆疊 */
+            gap: 0; /* 移除欄位間距 */
+        }
+
+        /* 讓 form-group 在小螢幕下寬度填滿 */
+        .form-group {
+            width: 100%;
+        }
+
+        /* 5. 區塊標題分隔線調整 */
+        .section-line {
+            width: 100%; /* 讓分隔線佔滿寬度 */
+            margin: 30px 0; /* 調整上下間距 */
+            justify-content: center; /* 讓內容置中 */
+        }
+
+        /* 取消標題左邊的線段 */
+        .section-line::before {
+            display: none;
+        }
+
+        /* 讓標題後的線段更短 */
+        .section-line::after {
+            margin-right: 0;
+        }
+
+        .section-title {
+            width: auto; /* 讓標題寬度根據內容決定 */
+            padding: 0 10px; /* 增加左右內邊距，與線段保持距離 */
+            text-align: center;
+            font-size: 16px;
+            border: 4px solid #575252;
             
-            label {
-                font-weight: bold;
-                margin-bottom: 6px;
-                color: #4e4a4c;
-                font-size: 16px;
-            }
-    
-            /* ==== 表單欄位 ==== */
-            input,
-            select,
-            textarea {
-                padding: 10px;
-                border-radius: 6px;
-                border: 1px solid #c8c8c8;
-                font-size: 11px;
-                background-color: #f8f8f8;
-                box-sizing: border-box;
-                color: #4c4c4c;
-            }
-    
-            input:focus,
-            select:focus,
-            textarea:focus {
-                outline: none;
-                border-color: #bfa3b4;
-                background: #fff;
-            }
-    
-            /* ==== 注意事項 ==== */
-            .notice-box {
-                margin-top: 30px;
-                background: #fff5f6;
-                padding: 18px 22px;
-                border-left: 5px solid #e1b7bf;
-                border-radius: 10px;
-                line-height: 1.8;
-                font-size: 12px;
-                color: #6b6366;
+            
+        }
 
-                height: 150px;     /* 固定區域大小 */
-                overflow-y: auto
-            }
-    
-            .notice-box ul {
-                padding-left: 20px;
-                margin: 0;
-            }
-    
-            /* ==== 送出按鈕 ==== */
-            .submit-btn {
-                width: 130px;
-                background: #d7b8c3;
-                border: none;
-                padding: 9px 30px;
-                color: white;
-                font-size: 14px;
-                border-radius: 30px;
-                margin: 20px auto 0;
-                display: block;
-                cursor: pointer;
-                transition: 0.2s ease;
-            }
-    
-            .submit-btn:hover {
-                background: #c19aa9;
-            }
+        /* 6. 注意事項框調整 */
+        .notice-box {
+            padding: 15px; /* 減少內邊距 */
+            line-height: 1.6;
+        }
 
+        /* 7. 表單元素字體調整 */
+        input,
+        select,
+        textarea,
+        label {
+            font-size: 16px; /* 增加表單輸入框和標籤的字體大小，提高手機可讀性 */
+        }
+        }
 
-
-
-/* RWD 未修改 */
-
-/* ========================================================= */
-/* RWD 響應式設計 (Media Queries)            */
-/* ========================================================= */
-
-/* 當螢幕寬度小於或等於 768px 時 (常用於平板和手機) 
-*/
-@media (max-width: 768px) {
-
-    .banner img {
-        height: 350px;
-        margin-top: 60px;
-        content: url("../pic.other/news-banner-simg.png");
-        width: 100%;
-        height: auto;
-        object-fit: cover;       /* 讓圖片像背景一樣填滿 */
-        object-position: left top;
-    }
-    
-    
-    .body-container {
-        width: 100% !important;
-        padding: 0 !important;         
-    }
-
-    /* 2. 表單容器調整 */
-    .reservation-wrapper {
-        max-width: none; /* 取消最大寬度限制 */
-        padding: 20; /* 移除容器內邊距，利用 body-container 的 padding */
-    }
-
-    /* 3. 預約步驟調整 */
-    .step-img {
-        /* 將步驟圖片置中 */
-        margin-left: 0 !important; /* 覆蓋內聯樣式 */
-        text-align: center;
-    }
-    .step-img img {
-        width: 65%; /* 讓圖片寬度適應小螢幕 */
-        max-width: 300px;
-        height: auto;
-    }
-
-    /* 步驟文字排版調整 */
-    .booking-steps {
-        margin-left: 0; /* 取消左側偏移 */
-        gap: 10%; /* 減少步驟之間的間距 */
-        justify-content: center; /* 置中 */
-        margin-top: -10px;
-        font-size: 11px; /* 縮小字體 */
-    }
-
-    /* 4. 表單欄位排版調整 (關鍵 RWD 調整) */
-    .form-row {
-        flex-direction: column; /* 將水平排列的欄位改為垂直堆疊 */
-        gap: 0; /* 移除欄位間距 */
-    }
-
-    /* 讓 form-group 在小螢幕下寬度填滿 */
-    .form-group {
-        width: 100%;
-    }
-
-    /* 5. 區塊標題分隔線調整 */
-    .section-line {
-        width: 100%; /* 讓分隔線佔滿寬度 */
-        margin: 30px 0; /* 調整上下間距 */
-        justify-content: center; /* 讓內容置中 */
-    }
-    
-    /* 取消標題左邊的線段 */
-    .section-line::before {
-        display: none;
-    }
-
-    /* 讓標題後的線段更短 */
-    .section-line::after {
-        margin-right: 0;
-    }
-
-    .section-title {
-        width: auto; /* 讓標題寬度根據內容決定 */
-        padding: 0 10px; /* 增加左右內邊距，與線段保持距離 */
-        text-align: center;
-        font-size: 16px;
-        border: 4px solid #575252;
         
-        
-    }
 
-    /* 6. 注意事項框調整 */
-    .notice-box {
-        padding: 15px; /* 減少內邊距 */
-        line-height: 1.6;
-    }
-
-    /* 7. 表單元素字體調整 */
-    input,
-    select,
-    textarea,
-    label {
-        font-size: 16px; /* 增加表單輸入框和標籤的字體大小，提高手機可讀性 */
-    }
-}
-
-/* 當螢幕寬度小於或等於 480px 時 (針對更小的手機螢幕) 
-
-@media (max-width: 480px) {
-    /* 進一步縮小步驟之間的間距 
-    .booking-steps {
-        gap: 5%;
-        margin-top: 10px;
-    }
-    
-    /* 調整步驟圖標和文字的間距 
-    .booking-steps img {
-        margin-bottom: 2px;
-    }
-
-    /* 調整送出按鈕大小 
-    .submit-btn {
-        width: 100%;
-        max-width: 250px;
-        padding: 12px 0;
-        font-size: 16px;
-    }
-
-    /* 確保所有輸入元素在極小螢幕上寬度填滿 
-    input, select, textarea {
-        width: 100%;
-    }
-
-    .body-container {
-        width: 90%;
-    }
-}
+        }
