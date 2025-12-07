@@ -17,6 +17,9 @@ main {
     z-index: 5;
     } 
 
+    h1 {
+        display: none;
+    }
     .banner-img img {
         width: 100%;
     }
@@ -39,23 +42,28 @@ main {
         margin-top: 20px;
     }
     .time {
-        font-family: "Noto Serif TC", serif;
-        font-size: 14px;
+        font-family: "Noto Sans TC", serif;
+        font-size: 16px;
         letter-spacing: 2px;
         margin-left: 3px;
+        color: #746e6e;
     }
 
+    .news-textcontent {
+        width: 120%;
+    }
     .news-textcontent .news-title {
         font-family: "Noto Serif TC", serif;
-        font-size: 15px;
+        
+        font-size: 18px;
         line-height: 30px;
         margin-top: 20px;
     }
 
     .news-textcontent .news-txt {
-        font-size: 14px;
+        font-size: 16px;
         color: #717070;
-        line-height: 25px;
+        line-height: 30px;
         margin-top: 10px;
     }
 
@@ -103,6 +111,14 @@ main {
 @media (max-width: 768px) {
 
 
+    h1 {
+        display: block;
+        text-align: center;
+        letter-spacing: 5px;
+        font-size: 24px;
+        font-family: Noto Serif TC;
+        margin-bottom: 35px;
+    }
     .banner-img img {
         height: 350px;
         margin-top: 60px;
@@ -124,11 +140,15 @@ main {
         align-items: center;
     }
 
+    * {
+        /* border: 1px solid red; */
+    }
     /* 單卡 改直式 */
     .news-item {
         width: 100%;
-        flex-direction: column;
+        /* flex-direction: column; */
         padding-bottom: 15px;
+        
         margin-bottom: 25px;
     }
 
@@ -151,11 +171,13 @@ main {
     .news-textcontent .news-title h4 {
         font-size: 16px;
         line-height: 26px;
+        margin-top: -20px;
+
     }
 
     /* 內文縮小一點 */
     .news-textcontent .news-txt {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 22px;
     }
 
@@ -164,13 +186,5 @@ main {
         width: 100%;
         text-align: right;
         margin-top: 20px;
-    }
-
-    /* 裝飾花朵圖重新定位（避免壓到內容） */
-    .flower-img img {
-        /* width: 100%;
-        position: static;
-        margin-top: 30px; */
-        
     }
 }

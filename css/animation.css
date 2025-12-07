@@ -1,0 +1,58 @@
+.fade-feature {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 2s ease, transform 2s ease;
+    }
+
+    .fade-feature.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+
+    .fade-service {
+        opacity: 0;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    /* 從右往左 */
+    .fade-service.fade-right {
+        transform: translateX(50px); /* 初始向右偏移 */
+    }
+
+    /* 從左往右 */
+    .fade-service.fade-left {
+        transform: translateX(-50px); /* 初始向左偏移 */
+    }
+
+    /* 進入視窗後 */
+    .fade-service.is-visible {
+        opacity: 1;
+        transform: translateX(0); /* 回到原位 */
+    }
+
+
+
+
+
+            /* fade-text*/
+        .fade-text {
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+
+        /* 進入視窗後顯示 */
+        .fade-text.is-visible {
+            opacity: 1;
+        }
+
+        /* 延遲控制 */
+        .fade-text.delay-1 {
+            transition-delay: 0.2s;
+        }
+        .fade-text.delay-2 {
+            transition-delay: 0.6s;
+        }
+        .fade-text.delay-3 {
+            transition-delay: 1s;
+        }

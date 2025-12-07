@@ -47,6 +47,7 @@
             position: relative;
             z-index: 5;
         }
+        
 
         .plans-content-wrapper {
             display: flex;
@@ -58,7 +59,9 @@
             width: 20%; 
             padding-top: 20px;
             font-family: sans-serif; 
+            
         }
+        
 
         .plans-sub-nav h2 {
             font-size: 20px;
@@ -79,6 +82,7 @@
             font-family: Noto Serif TC;
             margin-left: 30px;
             margin-top: 8px;
+            
         }
 
         .plans-sub-nav li a.active {

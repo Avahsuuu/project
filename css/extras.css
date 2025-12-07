@@ -14,7 +14,8 @@ header {
             z-index: -2;
         }
 
-        
+
+
         .slogan-line1 { 
             font-weight: bold;
             position: absolute;
@@ -53,10 +54,14 @@ header {
         }
 
         
-        /* .plans-content-wrapper {
+        .plans-content-wrapper {
             display: flex;
-            gap: 10%;
-        } */
+            /* gap: 10%; */
+        }
+
+        .plans-detail-sections {
+            margin-top: 10%;
+        }
 
         .plans-sub-nav {
             flex-shrink: 0;
@@ -107,21 +112,21 @@ header {
 
         .accessory-intro {
             /* border: 1px solid black; */
-            margin-left: 30%;
-            width: 65%;
+            margin-left: 5%;
+
+            width: 45%;
             margin-bottom:50px;
         }
 
         .accessory-list {
             display: flex;
             gap: 20px; 
-            margin-top: 40px;
         }
 
         .accessory-list2 {
             display: flex;
             gap: 20px;
-            margin-top: 70px; 
+            margin-top: 40px; 
         }
 
         .accessory-intro h3 {
@@ -145,6 +150,9 @@ header {
         
         }
 
+        .accessory-intro {
+            width: 90%;
+        }
         
         .accessory-intro h3::after {
             content: "";
@@ -160,7 +168,7 @@ header {
             justify-content: center;
         }
         .accessory-img img{
-            width: 200px;
+            width: 190px;
             height: auto;
             /* margin: auto; */
         }
@@ -198,10 +206,13 @@ header {
             margin-bottom:50px;
         }
 
+        .photo-wrap {
+            margin-top: 40px;
+        }
         .photo-list {
             display: flex;
             gap: 20px; 
-            margin-top: 40px;
+            /* margin-top: 40px; */
         }
 
 
@@ -331,14 +342,105 @@ header {
             height: 100%; 
             object-fit: cover; 
             object-position: 100% 50%; /* 👈 桌面版修正：圖片偏右但不過度，垂直居中 */
+
         }
+
+
+        /* extras.css (桌面版/預設樣式) */
+
+        .accessory-card {
+            /* 讓每個卡片平均佔據剩餘空間，並且在縮小時可以收縮 */
+            /* flex-basis: 0; 代表沒有初始大小，完全依賴比例 */
+            /* flex-grow: 1; 代表它們會平均瓜分空間 */
+            flex: 1 1 0; 
+            /* 或者更簡單地： flex: 1; */
+        }
+
+        .accessory-img img{
+            /* 保持圖片最大寬度為 190px，但允許它縮小 */
+            max-width: 190px; 
+            /* 關鍵步驟：確保圖片不會溢出其父容器 (.accessory-img) */
+            width: 100%; 
+            height: auto;
+        }
+
+        /* 確保 .accessory-img (圖片的父層) 能夠在卡片內縮放 */
+        .accessory-card .accessory-img {
+            /* 讓圖片容器佔據卡片內部的固定比例，或設定一個最大值 */
+            max-width: 190px; /* 限制容器的寬度 */
+            margin: 0 auto; /* 置中 */
+        }
+
+
+        .photo-card {
+            /* 讓每個卡片平均佔據剩餘空間，並且在縮小時可以收縮 */
+            /* flex-basis: 0; 代表沒有初始大小，完全依賴比例 */
+            /* flex-grow: 1; 代表它們會平均瓜分空間 */
+            flex: 1 1 0; 
+            /* 或者更簡單地： flex: 1; */
+        }
+
+        .plan-icon img{
+            /* 保持圖片最大寬度為 190px，但允許它縮小 */
+            /* max-width: 190px;  */
+            /* 關鍵步驟：確保圖片不會溢出其父容器 (.accessory-img) */
+            width: 30%; 
+            height: 30%;
+        }
+
+        /* 確保 .accessory-img (圖片的父層) 能夠在卡片內縮放 */
+        .photo-card .plan-icon {
+            /* 讓圖片容器佔據卡片內部的固定比例，或設定一個最大值 */
+            max-width: 190px; /* 限制容器的寬度 */
+            margin: 0 auto; /* 置中 */
+        }
+
+        
+
+        /* ==============================
+    圖片 hover 放大效果 (前六張)
+    ============================== */
+
+    /* 限制父層容器 overflow，防止溢出 */
+    .accessory-img, .photo-card  {
+        overflow: hidden;
+        display: inline-block; /* 讓 transform 效果限制在容器內 */
+        border-radius: 5px; /* 可選：增加圓角 */
+    }
+
+    /* 圖片本身過渡效果 */
+    .accessory-img img,
+    .photo-card  img {
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+    /* hover 放大效果，只對前六張圖片生效 */
+    .accessory-list .accessory-card:nth-child(-n+3) .accessory-img img,
+    .accessory-list2 .accessory-card:nth-child(-n+3) .accessory-img img,
+    .photo-list .photo-card:nth-child(-n+3)  img {
+        cursor: pointer;
+    }
+
+    .accessory-list .accessory-card:nth-child(-n+3) .accessory-img img:hover,
+    .accessory-list2 .accessory-card:nth-child(-n+3) .accessory-img img:hover,
+    .photo-list .photo-card:nth-child(-n+3)  img:hover {
+        transform: scale(1.1); /* 放大比例，可調整 1.05~1.15 */
+    }
+
+
+        
 /* ============================
    RWD — Mobile (max-width: 768px)
    只調整手機版，不變動原本的桌機版結構
    ============================ */
 @media (max-width: 768px) {
 
+    .plans-detail-sections {
+            margin-top: 10%;
+        }
 
+    
     .banner-img {
         width: 100%;
         height: 250px; /* 桌面版高度 */
@@ -372,10 +474,9 @@ header {
         white-space: nowrap;
     }
 
-    /* 確保 main 內容區在手機上佔滿寬度，移除居中限制 */
     main {
-        width: 90%; 
-        margin: 20px auto; 
+        width: 90%;
+        width:90%;
     }
 
     /* 結構調整：強制左側導航和右側內容垂直堆疊 */
@@ -390,6 +491,7 @@ header {
     .plans-sub-nav {
         width: 100%; /* 佔滿整行 */
         padding-top: 0;
+        padding-top: 20px;
     }
 
     .plans-sub-nav h2 {
@@ -407,11 +509,11 @@ header {
     
     
     
- 
+
     /* 內容區塊調整：移除桌機版上的 '跳過' 樣式 */
     .accessory-intro,
     .photo-intro {
-        margin-top: 50px;
+        /* margin-top: 50px; */
         /* text-align: center; */
         margin-left: 0; /* 關鍵：移除桌機版上為了避開左側導航而設置的邊距 */
         width: 100%; /* 佔滿剩餘寬度 */
@@ -430,7 +532,8 @@ header {
     /* 讓卡片本身在手機上以左右結構呈現 (圖片左，文字右) */
     .accessory-card,
     .photo-card {
-        width: 100%;
+        margin: auto;
+        width: 90%;
         display: flex; 
         /* flex-direction: row; */
         gap: 15px;
@@ -450,6 +553,10 @@ header {
         margin-left: 10px;
     }
 
+    .plan-icon img {
+            width: 40px;
+            height: 40px;
+        }
     /* 攝影方案圖示區 */
     .plan-icon {
         width: 50px;
@@ -486,4 +593,6 @@ header {
         text-align: right;
         font-size: 14px;
     }
+
+
 }

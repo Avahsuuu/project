@@ -1,7 +1,5 @@
 
-    *{
-        /* border: 2px solid red; */
-    }
+
 header {
             z-index: 20;
         }
@@ -56,10 +54,11 @@ header {
         }
 
         
-        /* .plans-content-wrapper {
+        .plans-content-wrapper {
             display: flex;
-            gap: 10%;
-        } */
+            /* gap: 10%; */
+            /* margin-top: 10%; */
+        }
 
         .plans-sub-nav {
             flex-shrink: 0;
@@ -110,7 +109,7 @@ header {
         /* plan */
 
         .basic-intro {
-            margin-left: 30%;
+            margin-left: 10%;
             width: 65%;
             margin-bottom:50px;
             position: relative;
@@ -122,13 +121,14 @@ header {
         }
         .basic-intro .intro-wrap {
             display: inline-block;
-            margin: 0 auto;           /* 置中 */
+            margin: 0 auto;   
+            margin-bottom: 50px;        /* 置中 */
         }
 
-        .intro-wrap {
-            /* border: 2px solid red; */
-            
+        .plans-detail-sections {
+            margin-top: 10%;
         }
+
 
         .intro-title {
             /* border: 2px solid blue; */
@@ -176,8 +176,11 @@ header {
             text-align: center;
         }
         .plan-cimg img{
+            
             width: 190px;
             height: auto;
+            margin-top: 0%;
+
             /* margin: auto; */
         }
 
@@ -185,6 +188,7 @@ header {
         .plan-img {
             gap: 5px;
             text-align: center;
+            margin-top: 0%;
         }
         .plan-img img{
             width: 190px;
@@ -242,8 +246,11 @@ header {
         }
 
 
+
+
+
         /* ============================
-   RWD — Mobile (max-width: 768px)
+RWD — Mobile (max-width: 768px)
    ============================ */
 @media (max-width: 768px) {
 
@@ -283,29 +290,45 @@ header {
     /* main 寬度縮小 */
     main {
         width: 92%;
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
     /* 上下排列 */
     .plans-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: column; /* 側邊欄和內容上下堆疊 */
     }
 
-    /* 左側選單 → 置頂 */
+    main {
+        width: 90%;
+        width:90%;
+    }
+
+    /* 結構調整：強制左側導航和右側內容垂直堆疊 */
+    .plans-content-wrapper {
+        flex-direction: column; 
+        gap: 20px;
+        /* 由於您的 HTML 中沒有為 plans-content-wrapper 設置 display: flex，
+           這一步可能不生效，但我們嘗試修正後面的子元素佈局。 */
+    }
+
+    /* 左側導航調整：置頂並橫向分散 */
     .plans-sub-nav {
-        width: 100%;
-        /* text-align: center; */
+        width: 100%; /* 佔滿整行 */
         padding-top: 0;
+        padding-top: 20px;
     }
 
+    .plans-sub-nav h2 {
+        
+    }
+    
     .plans-sub-nav ul {
         margin: 10px 0 0 0;
         margin-left: 10%;
-        padding: 0;
-        gap: 10%;
-        display: flex;
+        display: flex; /* 讓導航項目水平排列 */
+        justify-content: space-around; /* 平均分散空間 */
+        
+        list-style: none;
     }
 
     /* 內容區塊 */
@@ -314,43 +337,58 @@ header {
         margin-left: 0;
         padding: 0 10px;
     }
-
+    
     /* -----------------------
     plan-card：手機左右排列
-       ----------------------- */
+    ----------------------- */
     .plan-list {
-        flex-direction: column; 
+        flex-direction: column; /* 卡片列表本身還是垂直堆疊 */
         gap: 25px;
     }
-
+    
+    .plan-cimg {
+        height: 90%;
+        margin-top: 2%;
+    }
+    .plan-img {
+        margin-top: 5%;
+    }
     .plan-card {
+        ;
         display: flex ; 
-        flex-direction: row ;   /* ★★ 這裡改成左右排列 */
-        align-items: center;
+        flex-direction: row ;   /* 卡片內容改為左右排列 */
+        align-items: flex-start; /* 圖片和文字從頂部對齊 */
         gap: 15px;
         padding-bottom: 20px;
         border-bottom: 1px solid #eee;
-        text-align: left;      /* 文字靠左 */
+        text-align: left;
     }
-    .plans-detail-sections > .basic-intro:first-child .plan-list .plan-card:nth-child(2) {
-    flex-direction: row-reverse;
+    
+    /* 讓第二張卡片圖片與文字左右對調 */
+    .plans-detail-sections .intro-wrap:nth-child(1) .plan-list .plan-card:nth-child(2) {
+        flex-direction: row-reverse;
     }
-
-
 
     /* 左邊圖片區塊 */
+    .plan-cimg,
+    .plan-img {
+        flex-shrink: 0; /* 圖片不被壓縮 */
+        width: 140px;
+    }
+    
     .plan-cimg img,
     .plan-img img {
-        width: 140px;  /* 手機版縮小 */
+        width: 100%;  /* 手機版縮小 */
         height: auto;
     }
 
     /* 右邊文字區塊 */
     .plan-textcontent {
-        flex: 1;
+        flex: 1; /* 佔滿剩餘空間 */
     }
 
     .plan-textcontent .title {
+        text-align: left; /* 文字改為靠左 */
         font-size: 16px;
         margin-left: 0;
     }
@@ -362,16 +400,17 @@ header {
     }
 
     .plan-textcontent .price {
-        text-align: right;
+        text-align: left; /* 價格也改為靠左，靠近內文 */
         font-size: 14px;
         margin-top: 10px;
     }
-
-    /* txt-bg 響應式 */
+    
     .txt-bg {
-        margin-top: 10px;
         padding: 10px;
+        margin-top: 0; /* 移除多餘間距 */
     }
+
+    
 
 }
 

@@ -12,10 +12,11 @@ main {
     z-index: 5;
     background-color: transparent;
 }
-
+    
 .faq-title {
     text-align: center;
-    font-size: 18px;
+    letter-spacing: 5px;
+    font-size: 24px;
     font-family: Noto Serif TC;
     margin-bottom: 15px;
 }
@@ -30,6 +31,7 @@ main {
 }
 
 .faq-item {
+    
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
@@ -46,7 +48,7 @@ main {
     padding: 10px 15px;
     cursor: pointer;
     display: flex;
-    justify-content: space-between; /* 左文字，右箭頭 */
+    justify-content: space-between; 
     align-items: center;
 }
 

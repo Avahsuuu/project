@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animation.css">
 
     
 
@@ -31,7 +32,7 @@
     
             <!-- Hamburger icon -->
             <label for="menu-switch" class="hb-toggle">
-                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                <img src="pic.index/hb-img.svg" alt="選單按鈕" class="hb-icon">
             </label>
     
             <!-- Nav -->
@@ -81,12 +82,13 @@
     <!-- Lead-in -->
 
     <div class="intro-txtcontent">
-        <div class="mark1">”</div>
-        <div class="intro-txt">一襲和服，一卷千年時光繪卷。<br>
+        <div class="mark1 fade-text delay-1">”</div>
+        <div class="intro-txt fade-text delay-2">
+        一襲和服，一卷千年時光繪卷。<br>
         在 Harumi，您穿上的不僅是布料，更是京都優雅的精髓。<br>
         我們精選擁有故事的古老紋樣，細心打點每一處雅緻配飾，<br>
         讓每一次的轉身，都是對傳統文化最美好的致敬。</div>
-        <div class="mark2">”</div>
+        <div class="mark2 fade-text delay-3">”</div>
 
 
     </div>
@@ -110,9 +112,10 @@
 
 
     <!-- Products -->
+    
     <section class="featured-product">
         <h2>尋覓您的著物</h2>
-
+<div class="fade-feature">
         <div class="product-list">
 
             <div class="product-item">
@@ -138,12 +141,14 @@
                 </div>
             </div>
         </div>
+   
 
         
         <div class="btn-outer-wrapper">
             <a href="popular_kimono.html" class="view-all-btn">view</a>
         </div>
-    </section>
+    </section> 
+</div>
 
     <!-- Reviews -->
     <section class="reviews">
@@ -155,8 +160,8 @@
                 <img src="pic.index/arrow-icon.svg" alt="">
             </div>
     
-            <div class="info-item">
-                <p>著裝老師手法專業又快速，非常注重舒適度，我在戶外拍照一整天都沒有覺得悶熱。最棒的是全程中文溝通無障礙，我在台灣也能享受到高水準的日式服務，強力推薦！</p>
+            <div class="info-item active">
+                <p>著裝老師手法專業又快速，非常注重舒適度，我在戶外拍照一整天都沒有覺得悶熱。最棒的是全程中文溝通無障礙，強力推薦！</p>
                 <div class="info-img">
                     <img src="pic.index/info-img1.png">
                     <div class="name">Sophia Harris</div>
@@ -185,7 +190,7 @@
             </div>
         </div>
     
-        </div>
+        
         <div class="carousel-container">
             <div class="review-img-list">
                 <div class="review-img"><img src="pic.index/review-img1.jpg"></div>
@@ -206,7 +211,7 @@
     <!-- Services -->
     <section class="service">
     
-        <div class="service-item-1">
+        <div class="service-item-1 fade-service fade-right">
             
             <div class="service-text-content">
                 <h3 class="item-title-1">細節升級 - 精緻配飾租賃</h3>
@@ -224,7 +229,7 @@
         </div>
         
         
-        <div class="service-item-2">
+        <div class="service-item-2 fade-service fade-left">
             
             <div class="service-text-content">
                 <h3 class="item-title-2">定格永恆 - 專業攝影方案加購</h3>
@@ -269,7 +274,7 @@
     </footer>
 
         
-<!-- <script src="./js/index.js"></script> -->
+<script src="./js/index.js"></script>
 </body>
 
 </html>

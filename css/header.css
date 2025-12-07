@@ -37,6 +37,7 @@ header {
 }
 
 .header-item a {
+    letter-spacing: normal;
     font-size: 14px;
     color: #545052;
     display: block;
@@ -69,10 +70,11 @@ main {
     }
 
     .hb-toggle img {
-        width: 30px;
+        width: 40px;
         cursor: pointer;
         z-index: 300;
         position: relative;
+        opacity: 0.3;
     }
 
     .menu-switch {
@@ -101,6 +103,8 @@ main {
     }
 
     .header-item a {
+        letter-spacing: 3px;
+        font-style: 30px;
         width: 100%;      /* 全寬 */
         padding: 20px 0;  /* 讓按鈕更好點 */
         text-align: center;

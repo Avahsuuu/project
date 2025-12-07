@@ -29,7 +29,8 @@ main {
     
 }
 .about-info h1 {
-    font-size: 26px;
+    font-size: 24px;
+    letter-spacing: 5px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -143,7 +144,6 @@ main {
 
     .about-info h1{
         text-align: center;
-        margin-top: -40px;
 
     }
     .about-info {
@@ -169,6 +169,7 @@ main {
     }
 
     .block-1-txt {
+        
         /* width: 80%; */
         /* margin-left: 10%; */
     }
@@ -189,7 +190,10 @@ main {
     }
 
     .block-2-txt {
-        width:80%;
+        text-align: left;
+        margin: auto;
+        width: 90%;
+        /* width:80%; */
         /* margin-left: 10%; */
     }
 
@@ -305,7 +309,7 @@ main {
         margin-bottom: 5%;
     }
     
-
+    
 
 
 
@@ -340,15 +344,19 @@ main {
         text-align: center;
     }
 
+    /* * {
+        border: 1px solid red;
+    } */
     .txtgroup1 {
         width: 100%;
     }
     
     .block-1-txt {
+        text-align: left;
+        margin: auto;
+        width: 90%;
         line-height: 1.6;
         font-size: 15px;
-        width: 100%;
-        margin: auto;
     }
 
     

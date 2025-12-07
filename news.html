@@ -5,12 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>news</title>
-    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/news.css">
 
-    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+            /* background-image: url("../pic.other/repeat-bg.png"); */
+            
+            /* background-size: cover; */
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: 150px 150px;
+            background-repeat: repeat;
+            color: #333;
+            background-color: #FFF9F9;
+            position: relative; 
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; /* 至少佔滿一個視口高度 */
+        }
+
+        
+
+        body::before {
+            content: ""; 
+            position: fixed; /* 讓遮罩固定在整個視窗 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* 設定半透明白色遮罩 */
+            /* RGBA(255, 255, 255, 0.8) = 白色，80% 不透明度 (背景圖會露出 20%) */
+            background-color: rgba(255, 255, 255, 0.5); 
+            
+            z-index: -1; /* 將遮罩放在 body 內容的下方 */
+            }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 
 </head>
 
@@ -26,7 +73,7 @@
             </div>
     
             <label for="menu-switch" class="hb-toggle">
-                <img src="pic.other/options-img.png" alt="選單按鈕" class="hb-icon">
+                <img src="pic.index/hb-img.svg" alt="選單按鈕" class="hb-icon">
                 <input type="checkbox" id="menu-switch" class="menu-switch">
             </label>
     
@@ -66,6 +113,7 @@
     <div class="nwes-info-container">
 
 
+        <h1 >最新消息</h1>
         <div class="news-info">
             <div class="news-item">
             <div class="news-img">
@@ -80,11 +128,10 @@
             <div class="news-textcontent">
                 
                 <div class="news-title">
-                    <h4>【期間限定】「夜間浪漫」浴衣特展暨祇園限定體驗<br>- 祇園月夜🌙・浪漫限定</h4>
+                    <h4>【期間限定】「夜間浪漫」浴衣特展<br>- 祇園月夜🌙・浪漫限定</h4>
                 </div>
                 <div class="news-txt">
-                    <p>hanumi首屆「夜間浪漫」浴衣特展啟動！我們將打造專屬於夏日夜晚的氛憬，邀您在涼風中，穿上特選的質感浴衣，點亮京都的夜色。在hanumi，每一次體驗都是一場關於美的約會。亮點搶先看，夜間特選浴衣：
-                    搶先預覽並租借僅供夜間時段的深色系、優雅質感浴衣，襯托夜晚氣質。
+                    <p>hanumi首屆「夜間浪漫」浴衣特展啟動！我們將打造專屬於夏日夜晚的氛憬，邀您在涼風中，穿上特選的質感浴衣，點亮京都的夜色。在hanumi，每一次體驗都是一場關於美的約會。
                     </p>
                 </div>
             </div>
@@ -100,11 +147,10 @@
             <div class="news-textcontent">
                 
                 <div class="news-title">
-                    <h4>【服務升級】「振袖與您」年度造型諮詢會👘 <br>- 為最隆重的一天準備</h4>
+                    <h4>【服務升級】「振袖與您」造型諮詢會👘 <br>- 為最隆重的一天準備</h4>
                 </div>
                 <div class="news-txt">
-                    <p>「振袖與您」年度造型諮詢會，全面啟動！無論是成人式、畢業典禮或重要婚宴，振袖都承載著您對未來的美好期許。hanumi推出一對一深度諮詢，確保您在最重要時刻光彩奪目。服務亮點，振袖品項搶先看：
-                    搶先預覽並預約下一季最新引進的「豪華振袖」與「頂級訪問著」款式。
+                    <p>「振袖與您」年度造型諮詢會，全面啟動！無論是成人式、畢業典禮或重要婚宴，振袖都承載著您對未來的美好期許。hanumi推出一對一深度諮詢，確保您在最重要時刻光彩奪目。
                     </p>
                 </div>
             </div>
@@ -120,11 +166,10 @@
             <div class="news-textcontent">
                 
                 <div class="news-title">
-                    <h4>【文化沙龍】「著物之美」和服穿著與保養講座 <br>- 文化沙龍🌿系列</h4>
+                    <h4>【文化沙龍】「著物之美」穿著與保養講座 <br>- 文化沙龍🌿系列</h4>
                 </div>
                 <div class="news-txt">
-                    <p>「著物之美」和服穿著與保養講座。邀請和服文化專家，深入淺出地講解和服的歷史、穿著細節與正確的保養方式。讓您不僅是穿上「著物」，更能理解和感受其背後的文化底蘊。沙龍亮點 - 深度文化探索：
-                    探討「振袖」、「訪問著」與「小紋」的真正區別及不同場合的穿著禮儀。
+                    <p>「著物之美」和服穿著與保養講座。邀請和服文化專家，深入淺出地講解和服的歷史、穿著細節與正確的保養方式。讓您不僅是穿上「著物」，更能理解和感受其背後的文化底蘊。
                     </p>
                 </div>
             </div>

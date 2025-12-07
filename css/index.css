@@ -26,7 +26,7 @@
     /* top: 90%; */
     display: flex;
     justify-content: space-between; /* 左右貼齊，中間自動空白 */
-    padding: 1.5% 2%; 左右空白（避免貼到邊界）
+     padding: 1.5% 2%; /*左右空白（避免貼到邊界） */
     
     font-size: 20px;
     letter-spacing: 2px;
@@ -72,6 +72,7 @@ h2 {
     justify-content: center; /* 水平置中整個元素 */
     white-space: nowrap; /* 防止標題文字換行 */
     margin: 0 auto 30px auto; /* 標題上下邊距 */
+    letter-spacing: 3px;
     /* 確保字體是襯線體 */
     font-family: "Noto Serif TC", serif;
 }
@@ -240,7 +241,10 @@ h2 {
         opacity: 1;
         transform: translateY(0);    /* 最終位置 */
     }
+
 }
+
+    
 /* ---------------- Products ---------------- */
 
 .featured-product {
@@ -345,6 +349,8 @@ h2{
     /* 確保也套用到 Reviews 區塊的 h2 */
     /* 1. 設置為 Flex 容器並置中 */
     display: flex;
+    letter-spacing: 3px;
+
     align-items: center; /* 垂直置中文字和線條 */
     justify-content: center; /* 水平置中整個元素 */
     white-space: nowrap; /* 防止標題文字換行 */
@@ -379,11 +385,7 @@ h2{
         width: 90%;
         margin: auto;
     }
-    .product-img {
-        /* width: 330px; */
-        /* border: 1px solid blue; */
 
-    }
 
 
     
@@ -612,6 +614,7 @@ h2{
 
 
 .intro-txt {
+    letter-spacing: 2px;
     width: 100%;
     font-size: 16px;
     margin-top: -30px;
@@ -634,6 +637,9 @@ h2{
 
 }
 
+.reviews-info-list .info-item {
+    display: block;
+}
 
 
 
@@ -690,7 +696,8 @@ h2{
 
     .featured-product h2, .reviews h2{
         margin-top: -30px;
-        font-size: 22px;
+        font-size: 24px;
+        letter-spacing: 3px;
     }
     .product-txt, .product-txt-2, .product-txt-3 {
         font-size: 14px;
@@ -698,8 +705,27 @@ h2{
     .reviews-info-list{
         font-size: 14px;
     }
-    .info-item:nth-child(2), .info-item:nth-child(3){
-        display: none;
+    
+
+
+    /* 確保所有 info-item 預設都是隱藏的 */
+    .reviews-info-list .info-item {
+        display: none; 
+        /* 💡 這一行是關鍵！它會讓所有 info-item 消失 */
+        width: 80%; 
+        margin: 0 10px;
+        height: 270px;
+    }
+    
+    /* 確保只有帶有 active class 的 info-item 會顯示 */
+    .reviews-info-list .info-item.active {
+        display: block;
+    }
+
+    .arrow-icon-1, .arrow-icon-2 {
+        display: block; /* 確保箭頭顯示 */
+        cursor: pointer; /* 讓使用者知道可以點擊 */
+        padding: 10px;
     }
 
     .service-item-1 {
